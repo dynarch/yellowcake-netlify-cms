@@ -2,8 +2,11 @@
 template: SingleProject
 title: Data Warehouse
 status: Accomplished
-statDate: 2020-11-01
+startDate: 2020-11-01
 endDate: 2021-02-28
-excerpt: Azure Data Factory
+company: genXit GmbH
+usedTools: BimlFlex
+usedlanguages: BIML
+excerpt: Company Warehouse
 ---
-2 sources
+4 data sources
