@@ -279,6 +279,45 @@ collections: # A list of collections the CMS should be able to edit
             }
           - { label: Noindex, name: noindex, widget: boolean, required: false }
 
+  - name: projects
+    label: Project
+    editor:
+      preview: true
+    folder: content/projects
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - { label: Template, name: template, widget: hidden, default: SingleProject }
+      - { label: Title, name: title, widget: string }
+      - label: 'Status'
+        name: 'status'
+        widget: 'select'
+        options: ['Accomplished', 'Current', 'Draft']
+        default: 'Accomplished'
+      - { label: Start date, name: statDate, widget: date, format: 'YYYY-MM-DD' }
+      - { label: End dateOrder, name: endDate, widget: date, format: 'YYYY-MM-DD', required: false }
+      - { label: Excerpt, name: excerpt, widget: text }
+      - { label: Content, name: body, widget: markdown }
+      - label: 'Meta'
+        required: false
+        name: 'meta'
+        widget: 'object'
+        fields:
+          - { label: Title, name: title, widget: string, required: false }
+          - {
+              label: Description,
+              name: description,
+              widget: text,
+              required: false,
+            }
+          - {
+              label: Canonical Link,
+              name: canonicalLink,
+              widget: string,
+              required: false,
+            }
+          - { label: Noindex, name: noindex, widget: boolean, required: false }
+
   - name: posts
     label: Post
     editor:
