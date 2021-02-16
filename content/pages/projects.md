@@ -1,4 +1,4 @@
 ---
 title: View Projects
-subtitle: Einführung Mi9crosoft Dynamics 365
+subtitle: Einführung Microsoft Dynamics 365
 ---
