@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import _get from 'lodash/get'
 import { Link, graphql } from 'gatsby'
 import { ChevronLeft } from 'react-feather'
@@ -55,6 +55,24 @@ export const SingleProjectTemplate = ({
           {title && (
             <h1 className="SingleProject--Title" itemProp="title">
               {title}
+            </h1>
+          )}
+
+          {company && (
+            <h1 className="SingleProject--Title" itemProp="company">
+              {company}
+            </h1>
+          )}
+
+          {usedTools && (
+            <h1 className="SingleProject--Title" itemProp="usedTools">
+              {usedTools}
+            </h1>
+          )}
+
+          {usedLanguages && (
+            <h1 className="SingleProject--Title" itemProp="usedLanguages">
+              {usedLanguages}
             </h1>
           )}
 
@@ -123,6 +141,7 @@ export const pageQuery = graphql`
         status
         startDate(formatString: "MMMM Do, YYYY")
         endDate(formatString: "MMMM Do, YYYY")
+        featuredImage
         company
         usedTools
         usedlanguages
