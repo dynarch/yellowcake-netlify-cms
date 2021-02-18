@@ -124,6 +124,7 @@ export const pageQuery = graphql`
             status
             startDate
             endDate
+            featuredImage
             company
             usedTools
             excerpt
