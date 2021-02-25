@@ -336,8 +336,10 @@ collections: # A list of collections the CMS should be able to edit
       - { label: Start date, name: startDate, widget: date, format: 'YYYY-MM-DD' }
       - { label: End date, name: endDate, widget: date, format: 'YYYY-MM-DD', required: false }
       - { label: Company, name: company, widget: text }
+      - { label: CompanyUrl, name: companyUrl, widget: text }
       - { label: Used Tools, name: usedTools, widget: text }
       - { label: Used Languages, name: usedlanguages, widget: text }
+      - { label: Used Libraries, name: usedlibraries, widget: text }
       - {
           label: Featured Image,
           name: featuredImage,

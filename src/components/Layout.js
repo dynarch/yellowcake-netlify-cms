@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Meta from './Meta'
 import Nav from './Nav'
 import Footer from './Footer'
+// import Footer from '../components/Footer/Footer.js';
 import GithubCorner from './GithubCorner'
 
 import 'modern-normalize/modern-normalize.css'

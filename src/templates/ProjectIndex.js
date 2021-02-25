@@ -7,6 +7,15 @@ import PageHeader from '../components/PageHeader'
 import ProjectSection from '../components/ProjectSection'
 import Layout from '../components/Layout'
 
+import Header from "../components/Header/Header";
+import HeaderLinks from "../components/Header/HeaderLinks";
+
+// import { makeStyles } from "@material-ui/core/styles";
+// import styles from "assets/jss/material-kit-react/views/landingPage.js";
+// import styles from '../assets/jss/material-kit-react/views/components.js';
+
+// const useStyles = makeStyles(styles);
+
 /**
  * Filter projects by date. Feature dates will be fitered
  * When used, make sure you run a cronejob each day to show schaduled content. See docs
@@ -47,8 +56,22 @@ export const ProjectIndexTemplate = ({
         )
       }
 
+      // const classes = useStyles();
+      // const { ...rest } = props;
+
       return (
         <main className="Project">
+            <Header
+              color="transparent"
+              brand="Material Kit React"
+              rightLinks={<HeaderLinks />}
+              fixed
+              changeColorOnScroll={{
+                height: 400,
+                color: "white"
+              }}
+              // {...rest}
+            />
           <PageHeader
             title={title}
             subtitle={subtitle}
