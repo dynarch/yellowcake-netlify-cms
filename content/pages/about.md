@@ -1,6 +1,6 @@
 ---
-title: About me
-featuredImage: https://ucarecdn.com/275513ad-eb0f-41ee-9bf8-aaf71b2bb424/
-subtitle: This is an example of about page
+title: SOme test
+featuredImage: https://ucarecdn.com/f8c784d9-39b7-4e1d-9fc5-7903dacd57fd/
+subtitle: subtitle
 ---
-This is a body
+kjhklhlkj
