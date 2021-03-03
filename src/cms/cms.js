@@ -1,18 +1,23 @@
 import React from 'react'
 import CMS from 'netlify-cms-app'
+// import { de } from 'netlify-cms-locales';
+
 import './cms-utils'
 
-import { HomePageTemplate } from '../templates/HomePage'
+import { AboutPageTemplate } from '../templates/AboutPage'
+import { BlogIndexTemplate } from '../templates/BlogIndex'
 import { ComponentsPageTemplate } from '../templates/ComponentsPage'
 import { ContactPageTemplate } from '../templates/ContactPage'
 import { DefaultPageTemplate } from '../templates/DefaultPage'
-import { BlogIndexTemplate } from '../templates/BlogIndex'
+import { HomePageTemplate } from '../templates/HomePage'
+import { ProjectIndexTemplate } from '../templates/ProjectIndex'
 import { SinglePostTemplate } from '../templates/SinglePost'
 import { SingleProjectTemplate } from '../templates/SingleProject'
-import { ProjectIndexTemplate } from '../templates/ProjectIndex'
+// import {LandingPage} from '../views/LandingPage/LandingPage'
 import uploadcare from 'netlify-cms-media-library-uploadcare'
 
 CMS.registerMediaLibrary(uploadcare)
+// CMS.registerLocale('de', de);
 
 if (
   window.location.hostname === 'localhost' &&
@@ -25,8 +30,11 @@ if (
   CMS.registerPreviewStyle('/styles.css')
 }
 
-CMS.registerPreviewTemplate('home-page', ({ entry }) => (
-  <HomePageTemplate {...entry.toJS().data} />
+CMS.registerPreviewTemplate('about-page', ({ entry }) => (
+  <AboutPageTemplate {...entry.toJS().data} />
+))
+CMS.registerPreviewTemplate('blog-page', ({ entry }) => (
+  <BlogIndexTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('components-page', ({ entry }) => (
   <ComponentsPageTemplate {...entry.toJS().data} />
@@ -37,15 +45,15 @@ CMS.registerPreviewTemplate('contact-page', ({ entry }) => (
 CMS.registerPreviewTemplate('infoPages', ({ entry }) => (
   <DefaultPageTemplate {...entry.toJS().data} />
 ))
-CMS.registerPreviewTemplate('blog-page', ({ entry }) => (
-  <BlogIndexTemplate {...entry.toJS().data} />
+CMS.registerPreviewTemplate('home-page', ({ entry }) => (
+  <HomePageTemplate {...entry.toJS().data} />
+))
+CMS.registerPreviewTemplate('projects-page', ({ entry }) => (
+  <ProjectIndexTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('posts', ({ entry }) => (
   <SinglePostTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('projects', ({ entry }) => (
   <SingleProjectTemplate {...entry.toJS().data} />
-))
-CMS.registerPreviewTemplate('projects-page', ({ entry }) => (
-  <ProjectIndexTemplate {...entry.toJS().data} />
 ))
