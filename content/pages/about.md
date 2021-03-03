@@ -21,5 +21,17 @@ skills:
       * Dynamics 365 Field Service
 
       * Dynamics 365 Project Service Automation
+  - name: Microsoft Dynamics 365 Finance and Operations
+    title: Microsoft Dynamics 365 Finance and Operations
+    featuredImage: https://ucarecdn.com/c1dc163c-3e85-4663-8775-8ac5f4cd82aa/
+    description: "[Microsoft Dynamics 365 Finance and
+      Operations](https://dynamics.dialog.com.au/add-ons/enterprise-resoure-pla\
+      nning/) is Microsoft’s cloud ERP Tier one business application, built on
+      and for the Microsoft Azure cloud. Accelerate your business growth, unify
+      global financials and operations to empower people to make fast and
+      informed decisions. Dynamics 365 for Finance and Operations helps
+      businesses adapt quickly to changing market demands and drive business
+      growth. Dynamics 365 for Finance and Operations provides organisations
+      with end-to-end intelligent business applications in the cloud."
 ---
 kjhklhlkj
