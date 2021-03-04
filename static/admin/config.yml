@@ -45,7 +45,7 @@ collections: # A list of collections the CMS should be able to edit
             widget: 'list'
             fields:
               - { name: name, label: name, widget: string, default: '' }
-              - { label: Featured Image, name: featuredImage, widget: image }
+              - { name: featuredImage, label: Featured Image, widget: image }
               - { name: title, label: title, widget: string, default: '' }
               - { name: description, label: description, widget: markdown }
           - { label: Body, name: body, widget: markdown }
@@ -206,12 +206,7 @@ collections: # A list of collections the CMS should be able to edit
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     create: true # Allow users to create new documents in this collection
     fields:
-      - {
-          label: Template,
-          name: template,
-          widget: hidden,
-          default: DefaultPage,
-        }
+      - { label: Template, name: template, widget: hidden, default: DefaultPage }
       - { label: Slug, name: slug, widget: string }
       - { label: Title, name: title, widget: string }
       - { label: Featured Image, name: featuredImage, widget: image }
@@ -222,18 +217,8 @@ collections: # A list of collections the CMS should be able to edit
         widget: 'object'
         fields:
           - { label: Title, name: title, widget: string, required: false }
-          - {
-              label: Description,
-              name: description,
-              widget: text,
-              required: false,
-            }
-          - {
-              label: Canonical Link,
-              name: canonicalLink,
-              widget: string,
-              required: false,
-            }
+          - { label: Description, name: description, widget: text,  required: false }
+          - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
           - { label: Noindex, name: noindex, widget: boolean, required: false }
 
   - name: posts

@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 
 // import classNames from "classnames";
@@ -6,26 +6,29 @@ import { graphql } from 'gatsby'
 // import { makeStyles } from "@material-ui/core/styles";
 // import Button from "../components/CustomButtons/Button.js";
 import Content from '../components/Content'
+// import Image from '../components/Image'
+import InfoCard from '../components/InfoCard'
 import Layout from '../components/Layout'
 // import Footer from "../components/Footer/Footer.js";
 // import Header from '../components/Header/Header'
 // import HeaderLinks from '../components/Header/HeaderLinks'
-import Chat from "@material-ui/icons/Chat";
-import VerifiedUser from "@material-ui/icons/VerifiedUser";
-import Fingerprint from "@material-ui/icons/Fingerprint";
+// import Chat from "@material-ui/icons/Chat";
+// import VerifiedUser from "@material-ui/icons/VerifiedUser";
+// import Fingerprint from "@material-ui/icons/Fingerprint";
 // core components
 // import GridContainer from "../components/Grid/GridContainer.js";
 // import GridItem from "../components/Grid/GridItem.js";
-import InfoArea from "../components/InfoArea/InfoArea.js";
+// import InfoArea from "../components/InfoArea/InfoArea.js";
 // import Parallax from "../components/Parallax/Parallax.js";
 import PageHeader from '../components/PageHeader'
 // import Image from '../components/Image'
 // import styles from '../assets/jss/material-kit-react/views/landingPage';
 import '../components/Gallery.css'
+import '../components/PostCard.css'
 // const useStyles = makeStyles(styles);
 
 // Export Template for use in CMS preview
-export const AboutPageTemplate = ({ title, subtitle, featuredImage, body }) => 
+export const AboutPageTemplate = ({ title, subtitle, featuredImage, skills, body }) => 
 {
   // const classes = useStyles();
 
@@ -38,40 +41,17 @@ export const AboutPageTemplate = ({ title, subtitle, featuredImage, body }) =>
       backgroundImage={featuredImage}
     />
 
-  <section className="section">
-  <div className="container">
-    <Fragment>
-    <div className="Gallery">
-      <div className="Gallery--Item">
-        <InfoArea
-          title="Free Chat"
-          description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-          icon={Chat}
-          iconColor="info"
-          vertical
-          />
-      </div>
-      <div className="Gallery--Item">
-        <InfoArea
-          title="Verified Users"
-          description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-          icon={VerifiedUser}
-          iconColor="success"
-          vertical
-        />
-      </div>
-      <div className="Gallery--Item">
-          <InfoArea
-            title="Fingerprint"
-            description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-            icon={Fingerprint}
-            iconColor="danger"
-            vertical
-          />
+    <section className="section">
+      <div className="container">
+        <div className="PostSection">
+          <div className="PostSection--Grid">
+            {skills.map((item, index) => (
+              <InfoCard key={item.title + index} {...item} />
+              ))
+            }
+          </div>
         </div>
       </div>
-      </Fragment>
-    </div>
     </section>
 
     <section className="section">
@@ -105,6 +85,11 @@ export const pageQuery = graphql`
         title
         subtitle
         featuredImage
+        skills {
+          title
+          featuredImage
+          description
+        }
       }
     }
   }
