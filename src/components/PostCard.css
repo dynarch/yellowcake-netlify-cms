@@ -21,10 +21,15 @@
   height: 15rem;
 }
 
-.PostCard--Image--Center {
-  justify-content: center;
+.PostCard--Image-Small {
+  margin: 0 0 0 0;
+  max-width: 100%;
   align-items: center;
-  flex-direction: column;
+  position: static;
+}
+
+.PostCard--Image--Center {
+  align-self: center;
   width:auto;
   height: auto;
 }

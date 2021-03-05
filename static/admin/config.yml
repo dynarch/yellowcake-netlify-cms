@@ -303,8 +303,8 @@ collections: # A list of collections the CMS should be able to edit
       - { label: Company, name: company, widget: text }
       - { label: CompanyUrl, name: companyUrl, widget: text }
       - { label: Used Tools, name: usedTools, widget: text }
-      - { label: Used Languages, name: usedlanguages, widget: text }
-      - { label: Used Libraries, name: usedlibraries, widget: text }
+      - { label: Used Languages, name: usedLanguages, widget: text }
+      - { label: Used Libraries, name: usedLibraries, widget: text }
       - { label: Featured Image, name: featuredImage, widget: image, required: false }
       - { label: Excerpt, name: excerpt, widget: text }
       - { label: Content, name: body, widget: markdown }

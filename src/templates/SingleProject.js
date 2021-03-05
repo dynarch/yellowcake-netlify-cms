@@ -5,96 +5,125 @@ import { ChevronLeft } from 'react-feather'
 
 import Content from '../components/Content'
 import Layout from '../components/Layout'
-import './SingleProject.css'
+import './SinglePost.css'
 
 export const SingleProjectTemplate = ({
   title,
   startDate,
   endDate,
   company,
+  companyUrl,
   usedTools,
   usedLanguages,
+  usedLibraries,
   body,
   nextProjectURL,
   prevProjectURL
 }) => (
   <main>
     <article
-      className="SingleProject section light"
+      className="SinglePost section light"
       itemScope
       itemType="http://schema.org/BlogProjecting"
     >
       <div className="container skinny">
-        <Link className="SingleProject--BackButton" to="/project/">
+        <Link className="SinglePost--BackButton" to="/project/">
           <ChevronLeft /> BACK
         </Link>
-        <div className="SingleProject--Content relative">
-          <div className="SingleProject--Meta">
-            {startDate && (
-              <time
-                className="SingleProject--Meta--Date"
-                itemProp="startDate"
-                date={startDate}
-              >
-                {startDate}
-              </time>
-            )}
-          </div>
-          <div className="SingleProject--Meta">
-            {endDate && (
-              <time
-                className="SingleProject--Meta--Date"
-                itemProp="endDate"
-                date={endDate}
-              >
-                {endDate}
-              </time>
-            )}
-          </div>
-
+        <div className="SinglePost--Content relative">
           {title && (
-            <h1 className="SingleProject--Title" itemProp="title">
+            <h1 className="SinglePost--Title" itemProp="title">
               {title}
             </h1>
           )}
 
-          {company && (
-            <h1 className="SingleProject--Title" itemProp="company">
-              {company}
-            </h1>
-          )}
-
-          {usedTools && (
-            <h1 className="SingleProject--Title" itemProp="usedTools">
-              {usedTools}
-            </h1>
-          )}
-
-          {usedLanguages && (
-            <h1 className="SingleProject--Title" itemProp="usedLanguages">
-              {usedLanguages}
-            </h1>
-          )}
+          <table>
+            <tr>
+              <th>
+                Unternehmen:
+              </th>
+              <td>
+                {company && (
+                  <Link className="SinglePost--SubTitle" to={companyUrl}>
+                    {company}
+                  </Link>
+                )}
+              </td>
+            </tr>
+            <tr>
+              <th>
+                Periode:
+              </th>
+              <td>
+                {startDate && (
+                <time
+                  itemProp="startDate"
+                  date={startDate}
+                >
+                  {startDate}
+                </time>
+                )} - 
+                {endDate ? (
+                  <time
+                    itemProp="endDate"
+                    date={endDate}
+                  >
+                    {endDate}
+                  </time>
+                ) : "bis jetzt"}
+              </td>
+            </tr>
+            {usedTools && (
+              <tr>
+                <th>
+                  Tools und Technologien:
+                </th>
+                <td>
+                  {usedTools}
+                </td>
+              </tr>
+            )}
+            {usedLanguages && (
+              <tr>
+                <th>
+                  Sprachen:
+                </th>
+                <td>
+                {usedLanguages}
+                </td>
+              </tr>
+            )}
+            {usedLibraries && (
+              <tr>
+                <th>
+                  Sprachen:
+                </th>
+                <td>
+                {usedLibraries}
+                </td>
+              </tr>
+            )}
+          </table>
 
           <div className="SingleProject--InnerContent">
             <Content source={body} />
           </div>
 
-          <div className="SingleProject--Pagination">
+          <div className="SinglePost--Pagination">
             {prevProjectURL && (
               <Link
-                className="SingleProject--Pagination--Link prev"
+                className="SinglePost--Pagination--Link prev"
                 to={prevProjectURL}
               >
-                Previous Project
+                Vorheriges Projekt
               </Link>
             )}
             {nextProjectURL && (
               <Link
-                className="SingleProject--Pagination--Link next"
+                className="SinglePost--Pagination--Link next"
                 to={nextProjectURL}
               >
-                Next Project
+                Nächtes Projekt
               </Link>
             )}
           </div>
@@ -143,10 +172,11 @@ export const pageQuery = graphql`
         endDate(formatString: "MMMM Do, YYYY")
         featuredImage
         company
+        companyUrl
         usedTools
-        usedlanguages
+        usedLanguages
+        usedLibraries
         excerpt
-
       }
     }
 

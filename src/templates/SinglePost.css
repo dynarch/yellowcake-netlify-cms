@@ -49,12 +49,28 @@
   line-height: 1.2;
 }
 
+.SinglePost--SubTitle {
+  font-weight: 600;
+  text-align: left;
+  line-height: 1.4;
+}
+
 .SinglePost--InnerContent {
   padding: 0 8rem;
 }
 
 @media screen and (max-width: 750px) {
   .SinglePost--InnerContent {
+    padding: 0;
+  }
+}
+
+.SingleProject--InnerContent {
+  padding: 0 2rem;
+}
+
+@media screen and (max-width: 750px) {
+  .SingleProject--InnerContent {
     padding: 0;
   }
 }
@@ -76,3 +92,22 @@
 .SinglePost--Pagination--Link.next {
   margin-left: auto;
 }
+
+table {
+  margin: 5rem 5rem 2rem 5rem;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+th {
+  max-width: 20%;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+tr:hover {background-color: #f5f5f5;}
