@@ -44,7 +44,7 @@ export const SingleProjectTemplate = ({
               </th>
               <td>
                 {company && (
-                  <Link className="SinglePost--SubTitle" to={companyUrl}>
+                  <Link className="SinglePost--SubTitle" to={companyUrl} target="_blank" >
                     {company}
                   </Link>
                 )}
@@ -96,7 +96,7 @@ export const SingleProjectTemplate = ({
             {usedLibraries && (
               <tr>
                 <th>
-                  Sprachen:
+                  Bibliotheken:
                 </th>
                 <td>
                 {usedLibraries}

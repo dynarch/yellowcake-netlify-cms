@@ -24,14 +24,16 @@
 .PostCard--Image-Small {
   margin: 0 0 0 0;
   max-width: 100%;
+  position: relative;
+  display: flex;
   align-items: center;
   position: static;
 }
 
 .PostCard--Image--Center {
-  align-self: center;
-  width:auto;
-  height: auto;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .PostCard--Title {

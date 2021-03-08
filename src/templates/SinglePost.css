@@ -76,11 +76,12 @@
 }
 
 .SinglePost--Pagination {
-  margin: 4rem 0 0 0;
+  margin: 8rem 0 0 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
+
 
 .SinglePost--Pagination--Link {
   text-transform: uppercase;
@@ -94,7 +95,7 @@
 }
 
 table {
-  margin: 5rem 5rem 2rem 5rem;
+  margin: 2rem 2rem 2rem 2rem;
   border-collapse: collapse;
   width: 100%;
 }
