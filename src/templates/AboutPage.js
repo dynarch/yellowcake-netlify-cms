@@ -24,7 +24,7 @@ import PageHeader from '../components/PageHeader'
 // import Image from '../components/Image'
 // import styles from '../assets/jss/material-kit-react/views/landingPage';
 import '../components/Gallery.css'
-import '../components/PostCard.css'
+import '../components/InfoSection.css'
 // const useStyles = makeStyles(styles);
 
 // Export Template for use in CMS preview
@@ -43,8 +43,8 @@ export const AboutPageTemplate = ({ title, subtitle, featuredImage, skills, body
 
     <section className="section">
       <div className="container">
-        <div className="PostSection">
-          <div className="PostSection--Grid">
+        <div className="InfoSection">
+          <div className="InfoSection--Grid">
             {skills.map((item, index) => (
               <InfoCard key={item.title + index} {...item} />
               ))

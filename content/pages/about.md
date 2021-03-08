@@ -7,8 +7,8 @@ subtitle: subtitle
 skills:
   - name: Microsoft Dynamics 365 Customer Engagement
     title: Microsoft Dynamics 365 Customer Engagement
-    featuredImage: https://ucarecdn.com/1323c909-9633-481a-a038-63d7b1b0bacd/
-    # featuredImage: images/Microsoft-D365-Sales-small.png
+    # featuredImage: /images/logo_D365CE.png
+    featuredImage: https://ucarecdn.com/848050dd-d5eb-4786-8828-e0717a8ff335/
     description: >-
       With this change for *online* customers, we are no longer using the term
       "Dynamics 365 for Customer Engagement apps" to refer to the collection of
@@ -19,15 +19,14 @@ skills:
       * Dynamics 365 Field Service
       * Dynamics 365 Project Service Automation
   - name: Microsoft Power Platform
-    # featuredImage: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png
-    featuredImage: https://ucarecdn.com/e017ab3b-a2a3-40b2-b6d8-a05ec1727022/
+    featuredImage: https://ucarecdn.com/91fd52ae-ca37-459c-a0c4-cfd3d1bc4b6c/
     title: Microsoft Power Platform
     description: >-
         Power Platform description
 
   - name: Microsoft Dynamics 365 Finance and Operations
-    # featuredImage: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png
-    featuredImage: https://ucarecdn.com/817f5bc8-ff05-412a-8300-cba15ad5141d/
+    featuredImage: https://ucarecdn.com/c86c9f5e-ddc3-462c-8101-acf581581f77/
+    # featuredImage: /images/logo_D365FO.png
     title: Microsoft Dynamics 365 Finance and Operations
     description: "[Microsoft Dynamics 365 Finance and
       Operations](https://dynamics.dialog.com.au/add-ons/enterprise-resoure-pla\

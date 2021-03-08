@@ -1,8 +1,7 @@
 import React from 'react'
 import Content from '../components/Content'
-import Image from '../components/Image'
 
-import './PostCard.css'
+import './InfoCard.css'
 
 const InfoCard = ({
     title,
@@ -11,14 +10,14 @@ const InfoCard = ({
 }) => {
 
     return (
-    <div className="PostCard" >
+    <div className="InfoCard" >
         {featuredImage && (
-            <div className="PostCard--Image--Small">
-                <Image src={featuredImage} alt="..." />
-            </div>   
-        )}
-        <h1 className="PostCard--Title">{title}</h1>
-        <Content className='PostCard--Content' source = {description} />
+            <div className="InfoCard--Image">
+                <img src={featuredImage} alt={title} style={{zIndex:"100", overflow:"visible", position:"relative"}} />
+            </div>
+      )}
+        <h1 className="InfoCard--Title">{title}</h1>
+        <Content className='InfoCard--Content' source = {description} />
     </div>
     )
 }
