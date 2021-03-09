@@ -16,6 +16,7 @@ export const SingleProjectTemplate = ({
   usedTools,
   usedLanguages,
   usedLibraries,
+  tools,
   body,
   nextProjectURL,
   prevProjectURL
@@ -36,6 +37,24 @@ export const SingleProjectTemplate = ({
               {title}
             </h1>
           )}
+          <div className="SinglePost--Pagination">
+            {prevProjectURL && (
+              <Link
+                className="SinglePost--Pagination--Link prev"
+                to={prevProjectURL}
+              >
+                Vorheriges Projekt
+              </Link>
+            )}
+            {nextProjectURL && (
+              <Link
+                className="SinglePost--Pagination--Link next"
+                to={nextProjectURL}
+              >
+                Nächtes Projekt
+              </Link>
+            )}
+          </div>
 
           <table>
             <tr>
@@ -73,35 +92,15 @@ export const SingleProjectTemplate = ({
                 ) : "bis jetzt"}
               </td>
             </tr>
-            {usedTools && (
-              <tr>
-                <th>
-                  Tools und Technologien:
-                </th>
-                <td>
-                  {usedTools}
-                </td>
-              </tr>
-            )}
-            {usedLanguages && (
-              <tr>
-                <th>
-                  Sprachen:
-                </th>
-                <td>
-                {usedLanguages}
-                </td>
-              </tr>
-            )}
-            {usedLibraries && (
-              <tr>
-                <th>
-                  Bibliotheken:
-                </th>
-                <td>
-                {usedLibraries}
-                </td>
-              </tr>
+            {tools && (tools.map((tool, index) => (
+              <tr key={tool.name+index}>
+              <th>
+                {tool.name}
+              </th>
+              <td>
+                {tool.description}
+              </td>
+            </tr>))
             )}
           </table>
 
@@ -176,6 +175,10 @@ export const pageQuery = graphql`
         usedTools
         usedLanguages
         usedLibraries
+        tools {
+          name
+          description
+        }
         excerpt
       }
     }

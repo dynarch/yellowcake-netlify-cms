@@ -8,16 +8,15 @@ const InfoCard = ({
     featuredImage,
     description
 }) => {
-
     return (
     <div className="InfoCard" >
         {featuredImage && (
             <div className="InfoCard--Image">
-                <img src={featuredImage} alt={title} style={{zIndex:"100", overflow:"visible", position:"relative"}} />
+                <img src={featuredImage} alt={title} className="InfoCard--Image--Image" />
             </div>
       )}
-        <h1 className="InfoCard--Title">{title}</h1>
-        <Content className='InfoCard--Content' source = {description} />
+        <h2 className="InfoCard--Title">{title}</h2>
+        <Content className='InfoCard--Content tracking-in-contract-bck' source = {description} />
     </div>
     )
 }

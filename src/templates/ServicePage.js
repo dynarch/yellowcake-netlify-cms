@@ -7,7 +7,7 @@ import Layout from '../components/Layout'
 import PageHeader from '../components/PageHeader'
 import '../components/InfoSection.css'
 
-export const AboutPageTemplate = ({ title, subtitle, featuredImage, skills, body }) => 
+export const ServicePageTemplate = ({ title, subtitle, featuredImage, productsIntro, products, body }) => 
 {
   return (
   <main>
@@ -22,7 +22,7 @@ export const AboutPageTemplate = ({ title, subtitle, featuredImage, skills, body
       <div className="container">
         <div className="InfoSection">
           <div className="InfoSection--Grid">
-            {skills.map((item, index) => (
+            {products.map((item, index) => (
               <InfoCard key={item.title + index} {...item} />
               ))
             }
@@ -40,21 +40,21 @@ export const AboutPageTemplate = ({ title, subtitle, featuredImage, skills, body
   )
 }
 
-// Export Default AboutPage for front-end
-const AboutPage = ({ data: { page } }) => (
+// Export Default ServicePage for front-end
+const ServicePage = ({ data: { page } }) => (
   <Layout meta={page.frontmatter.meta || false}>
-    <AboutPageTemplate {...page} {...page.frontmatter} body={page.html} />
+    <ServicePageTemplate {...page} {...page.frontmatter} body={page.html} />
   </Layout>
 )
 
-export default AboutPage
+export default ServicePage
 
 export const pageQuery = graphql`
-  ## Query for AboutPage data
+  ## Query for ServicePage data
   ## Use GraphiQL interface (http://localhost:8000/___graphql)
   ## $id is processed via gatsby-node.js
   ## query name must be unique to this file
-  query AboutPage($id: String!) {
+  query ServicePage($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
       ...Meta
       html
@@ -62,7 +62,8 @@ export const pageQuery = graphql`
         title
         subtitle
         featuredImage
-        skills {
+        productsIntro
+        products {
           title
           featuredImage
           description

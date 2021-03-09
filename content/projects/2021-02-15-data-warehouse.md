@@ -9,6 +9,13 @@ companyUrl: https://genxit.de
 usedTools: BimlFlex
 usedLanguages: BIML
 usedLibraries: bu
+tools: 
+  - name: Tools
+    description: BimlFlex, Visual Studio, SQL Server Managmeent Studio
+  - name: Languages
+    description: BIML, PySpark, T-SQL
+  - name: Azure Tools
+    description: Azure Data Bricks, Azre Data Factory
 featuredImage: https://ucarecdn.com/6dc60c72-0e81-463a-b675-f735fff31b2b/
 excerpt: Company Warehouse
 ---

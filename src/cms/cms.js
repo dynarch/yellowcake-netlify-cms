@@ -11,9 +11,9 @@ import { ContactPageTemplate } from '../templates/ContactPage'
 import { DefaultPageTemplate } from '../templates/DefaultPage'
 import { HomePageTemplate } from '../templates/HomePage'
 import { ProjectIndexTemplate } from '../templates/ProjectIndex'
+import { ServicePageTemplate } from '../templates/ServicePage'
 import { SinglePostTemplate } from '../templates/SinglePost'
 import { SingleProjectTemplate } from '../templates/SingleProject'
-// import {LandingPage} from '../views/LandingPage/LandingPage'
 import uploadcare from 'netlify-cms-media-library-uploadcare'
 
 CMS.registerMediaLibrary(uploadcare)
@@ -56,4 +56,7 @@ CMS.registerPreviewTemplate('posts', ({ entry }) => (
 ))
 CMS.registerPreviewTemplate('projects', ({ entry }) => (
   <SingleProjectTemplate {...entry.toJS().data} />
+))
+CMS.registerPreviewTemplate('service-page', ({ entry }) => (
+  <ServicePageTemplate {...entry.toJS().data} />
 ))
