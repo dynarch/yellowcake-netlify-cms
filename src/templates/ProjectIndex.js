@@ -130,7 +130,6 @@ export const pageQuery = graphql`
             endDate
             featuredImage
             company
-            usedTools
             excerpt
           }
         }

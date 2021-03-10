@@ -19,6 +19,11 @@ products:
       businesses adapt quickly to changing market demands and drive business
       growth. Dynamics 365 for Finance and Operations provides organisations
       with end-to-end intelligent business applications in the cloud."
+  - name: Microsoft Power Platform
+    featuredImage: https://ucarecdn.com/91fd52ae-ca37-459c-a0c4-cfd3d1bc4b6c/
+    title: Microsoft Power Platform
+    description: >-
+        Power Platform description
   - name: Microsoft Dynamics 365 Customer Engagement
     title: Microsoft Dynamics 365 Customer Engagement
     # featuredImage: /images/logo_D365CE.png
@@ -32,10 +37,5 @@ products:
       * Dynamics 365 Marketing
       * Dynamics 365 Field Service
       * Dynamics 365 Project Service Automation
-  - name: Microsoft Power Platform
-    featuredImage: https://ucarecdn.com/91fd52ae-ca37-459c-a0c4-cfd3d1bc4b6c/
-    title: Microsoft Power Platform
-    description: >-
-        Power Platform description
 ---
 Konzept, Design, Beratung und Entwicklung der Unternehmenslösungen auf Basis von Microsoft Dynamics 365:

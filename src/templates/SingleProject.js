@@ -13,9 +13,6 @@ export const SingleProjectTemplate = ({
   endDate,
   company,
   companyUrl,
-  usedTools,
-  usedLanguages,
-  usedLibraries,
   tools,
   body,
   nextProjectURL,
@@ -172,9 +169,6 @@ export const pageQuery = graphql`
         featuredImage
         company
         companyUrl
-        usedTools
-        usedLanguages
-        usedLibraries
         tools {
           name
           description

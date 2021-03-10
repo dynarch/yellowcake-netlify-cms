@@ -12,7 +12,6 @@ export const AboutPageTemplate = ({ title, subtitle, featuredImage, skills, body
   return (
   <main>
     <PageHeader
-      large
       title={title}
       subtitle={subtitle}
       backgroundImage={featuredImage}

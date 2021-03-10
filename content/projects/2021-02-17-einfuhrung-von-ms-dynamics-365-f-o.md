@@ -8,14 +8,11 @@ featuredImage: >-
   https://ucarecdn.com/b89e588f-5659-47e9-9caa-6be0ad058572/-/crop/1690x1728/0,638/-/preview/
 company: genXit GmbH
 companyUrl: https://genxit.de
-usedTools: Microsoft Visual Studio 2013, Microsoft  Business Intelligence Studio, Microsoft Dynamics AX MorphX, MIcrosoft Sure Step.
-usedLanguages: X++, C#.NET, XML, XSLT, XPATH, Javascript
-usedLibraries:
 tools: 
   - name: Tools
-    description: BimlFlex, Visual Studio, SQL Server Managmeent Studio
-  - name: Languages
-    description: BIML, PySpark, T-SQL
+    description:  Microsoft Visual Studio 2013, Microsoft  Business Intelligence Studio, Microsoft Dynamics AX MorphX, MIcrosoft Sure Step.
+  - name: Sprachen
+    description: X++, C#.NET, XML, XSLT, XPATH, Javascript
   - name: Azure Tools
     description: Azure Data Bricks, Azre Data Factory
 excerpt: Einführen von Microsoft Dynamics 365 for Finance and Operations (Cloud) und Commerce für Thomas Philipps Unternehmen

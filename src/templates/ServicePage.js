@@ -12,7 +12,6 @@ export const ServicePageTemplate = ({ title, subtitle, featuredImage, productsIn
   return (
   <main>
     <PageHeader
-      large
       title={title}
       subtitle={subtitle}
       backgroundImage={featuredImage}

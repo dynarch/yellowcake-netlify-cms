@@ -2,7 +2,8 @@
 template: AboutPage
 slug: about
 title: About me
-featuredImage: https://ucarecdn.com/f8c784d9-39b7-4e1d-9fc5-7903dacd57fd/
+featuredImage: url("/images/logo_D365CE.png")
+# featuredImage: https://ucarecdn.com/f8c784d9-39b7-4e1d-9fc5-7903dacd57fd/
 subtitle: subtitle
 skills:
   - name: Microsoft Dynamics 365 Customer Engagement

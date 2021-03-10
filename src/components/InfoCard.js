@@ -16,7 +16,7 @@ const InfoCard = ({
             </div>
       )}
         <h2 className="InfoCard--Title">{title}</h2>
-        <Content className='InfoCard--Content tracking-in-contract-bck' source = {description} />
+        <Content className='InfoCard--Content' source = {description} />
     </div>
     )
 }
