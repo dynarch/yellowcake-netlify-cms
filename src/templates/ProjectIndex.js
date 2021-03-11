@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import { Location } from '@reach/router'
 import qs from 'qs'
 
+import BlogSearch from '../components/BlogSearch'
 import PageHeader from '../components/PageHeader'
 import ProjectSection from '../components/ProjectSection'
 import Layout from '../components/Layout'
@@ -48,7 +49,7 @@ export const ProjectIndexTemplate = ({
       if (enableSearch && queryObj.s) {
         const searchTerm = queryObj.s.toLowerCase()
         filteredProjects = filteredProjects.filter(projects =>
-          projects.frontmatter.title.toLowerCase().includes(searchTerm)
+          projects.frontmatter.excerp.toLowerCase().includes(searchTerm)
         )
       }
 
@@ -59,6 +60,15 @@ export const ProjectIndexTemplate = ({
              subtitle={subtitle}
              backgroundImage={featuredImage}
            />
+
+          <section className="section thin">
+            <div className="container">
+              <div className="PostCategoriesNav">
+                <BlogSearch />
+              </div>
+            </div>
+          </section>
+
           {!!projects.length && (
             <section className="section">
               <div className="container">

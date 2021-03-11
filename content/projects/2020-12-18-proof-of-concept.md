@@ -19,7 +19,7 @@ excerpt: Proof of Concept zum Einführen von Microsoft Dynamics 365 for Finance 
 ---
 ## Beschreibung
 
-Umsetzen Dynamics 365 FO, Integration mit anderen Anwendungen (iQuote, SalesForce) mithilfe Cloud-basierende Technologien (LogicApps. PowerApps, CDS Common Data Service). Integrieren externe Produktkonfiguratoren mit Dynamics Standard Features (Constraint-Based Configuration Technology), Umsetzen komplexe Produktstrukturen.
+Umsetzen Microsoft Dynamics 365 Finance and Operations, Integration mit anderen Anwendungen (iQuote, SalesForce) mithilfe Cloud-basierende Technologien (LogicApps, PowerApps, CDS Common Data Service). Integrieren externe Produktkonfiguratoren mit Dynamics Standard Features (Constraint-Based Configuration Technology), Umsetzen komplexe Produktstrukturen.
 
 ## Fuktionen
 
@@ -27,8 +27,9 @@ Umsetzen Dynamics 365 FO, Integration mit anderen Anwendungen (iQuote, SalesForc
 * Konzept-, funktionelles und physisches Design des Systems
 * Integrieren von Dynamics AX/D365FO mit externen Systemen und Anwendungen.
 
+## Umgebungen
 
-Umgebungen: Azure DevOps Server.
+Azure DevOps Server.
 
 ## Verantwortlichkeiten
 

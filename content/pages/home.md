@@ -2,7 +2,7 @@
 template: HomePage
 slug: 
 title: Home page
-featuredImage: https://ucarecdn.com/49fee944-a5b4-4ef7-830b-db3c4383fea9/
+featuredImage: https://ucarecdn.com/8af82b68-427e-4134-9813-a1e1c0493221/
 subtitle: Subtitle
 accordion:
   - title: Accordion title 1

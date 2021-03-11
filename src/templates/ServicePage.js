@@ -66,6 +66,10 @@ export const pageQuery = graphql`
           title
           featuredImage
           description
+          button {
+            ref
+            text
+          }
         }
       }
     }

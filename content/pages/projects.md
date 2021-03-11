@@ -2,7 +2,7 @@
 template: ProjectIndex
 slug: projects
 title: View Projects
-featuredImage: 'https://ucarecdn.com/b6254577-26bf-4b79-aa9b-f3793e2aebdc/'
+featuredImage: 'https://ucarecdn.com/eabb726e-6e44-4768-8b34-e35d5d50fb7a/'
 subtitle: Einführung Microsoft Dynamics 365
 meta:
   description: This is a meta description.

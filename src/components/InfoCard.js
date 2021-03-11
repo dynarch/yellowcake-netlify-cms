@@ -1,12 +1,13 @@
 import React from 'react'
 import Content from '../components/Content'
-
+import { Link } from 'gatsby'
 import './InfoCard.css'
 
 const InfoCard = ({
     title,
     featuredImage,
-    description
+    description,
+    button
 }) => {
     return (
     <div className="InfoCard" >
@@ -17,6 +18,13 @@ const InfoCard = ({
       )}
         <h2 className="InfoCard--Title">{title}</h2>
         <Content className='InfoCard--Content' source = {description} />
+        {button && (button.map((item, index) => (
+          <div key={item.text + index} className="InfoCard--Footer">
+            <Link to={item.ref} className="Button">{item.text}</Link>
+          </div>
+          ))
+          )
+        }
     </div>
     )
 }

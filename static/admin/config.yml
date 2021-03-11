@@ -45,38 +45,9 @@ collections: # A list of collections the CMS should be able to edit
             widget: 'list'
             fields:
               - { name: name, label: name, widget: string, default: '' }
-              - { name: featuredImage, label: Featured Image, widget: image }
-              - { name: title, label: title, widget: string, default: '' }
-              - { name: description, label: description, widget: markdown }
-          - { label: Body, name: body, widget: markdown }
-          - label: 'Meta'
-            required: false
-            name: 'meta'
-            widget: 'object'
-            fields:
-              - { label: Title, name: title, widget: string, required: false }
-              - { label: Description, name: description, widget: text, required: false  }
-              - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
-              - { label: Noindex, name: noindex, widget: boolean, required: false }
-
-      - file: 'content/pages/service.md'
-        label: 'Leistungen'
-        name: 'service-page'
-        fields:
-          - { label: Template, name: template, widget: hidden, default: ServicePage }
-          - { label: Slug, name: slug, widget: hidden, default: '' }
-          - { label: Title, name: title, widget: string }
-          - { label: Featured Image, name: featuredImage, widget: image }
-          - { label: Subtitle, name: subtitle, widget: markdown, required: false }
-          - { label: Products Introduction, name: productsIntro, widget: markdown }
-          - label: 'Products'
-            name: 'products'
-            widget: 'list'
-            fields:
-              - { name: name, label: name, widget: string, default: '' }
-              - { name: featuredImage, label: Featured Image, widget: image }
-              - { name: title, label: title, widget: string, default: '' }
-              - { name: description, label: description, widget: markdown }
+              - { name: lastYearUsed, label: Verwendet bis, widget: date, format: 'YYYY', default: '' }
+              - { name: yearsUsed, label: Verwendet (Jahren), widget: number, default: 1 }
+              - { name: level, label: description, widget: select, options: ['Expert', 'Gut', 'Mittel', 'Grundkenntnis'], default: 'Expert' }
           - { label: Body, name: body, widget: markdown }
           - label: 'Meta'
             required: false
@@ -226,6 +197,42 @@ collections: # A list of collections the CMS should be able to edit
               - { label: Description, name: description, widget: text, required: false  }
               - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
               - { label: Noindex, name: noindex, widget: boolean, required: false }
+
+      - file: 'content/pages/service.md'
+        label: 'Leistungen'
+        name: 'service-page'
+        fields:
+          - { label: Template, name: template, widget: hidden, default: ServicePage }
+          - { label: Slug, name: slug, widget: hidden, default: '' }
+          - { label: Title, name: title, widget: string }
+          - { label: Featured Image, name: featuredImage, widget: image }
+          - { label: Subtitle, name: subtitle, widget: markdown, required: false }
+          - { label: Products Introduction, name: productsIntro, widget: markdown }
+          - label: 'Products'
+            name: 'products'
+            widget: 'list'
+            fields:
+              - { name: name, label: name, widget: string, default: '' }
+              - { name: featuredImage, label: Featured Image, widget: image }
+              - { name: title, label: title, widget: string, default: '' }
+              - { name: description, label: description, widget: markdown }
+              - name: button, 
+                label: button, 
+                widget: object, 
+                fields:
+                  - { name: ref, label: Reference, widget: string, default: '' }
+                  - { name: text, label: Text, widget: text }
+          - { label: Body, name: body, widget: markdown }
+          - label: 'Meta'
+            required: false
+            name: 'meta'
+            widget: 'object'
+            fields:
+              - { label: Title, name: title, widget: string, required: false }
+              - { label: Description, name: description, widget: text, required: false  }
+              - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
+              - { label: Noindex, name: noindex, widget: boolean, required: false }
+
 
   - name: infoPages
     label: Info Page

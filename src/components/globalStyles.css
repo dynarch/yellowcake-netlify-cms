@@ -212,12 +212,14 @@ blockquote {
   border: none;
   transition: all 0.2s ease;
   cursor: pointer;
+  margin: 1rem 1rem 1rem 1rem;
   border-radius: var(--borderRadius);
 }
 .Button:hover,
 .Button:focus {
   opacity: 0.95;
   outline: none;
+  background-color: aqua;
 }
 .Button[disabled] {
   opacity: 0.4;

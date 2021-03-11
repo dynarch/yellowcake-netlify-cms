@@ -6,6 +6,8 @@
   border-radius: var(--borderRadius);
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
   overflow: visible;
+  display: flex;
+  flex-direction: column;
 }
 
 img .InfoCard--Image--Image{
@@ -15,12 +17,12 @@ img .InfoCard--Image--Image{
 
 .InfoCard:hover,
 .InfoCard:focus {
-  transform: scale(1.04);
+  /* transform: scale(1.04); */
   transition: all 0.4s ease-in-out;
   box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
-  background: #180447e3;
+  /* background: #180447e3;
   color: white;
-  animation: colorBg 0.6s 1;
+  animation: colorBg 0.6s 1; */
 }
 
 @keyframes colorBg {
@@ -51,4 +53,11 @@ img .InfoCard--Image--Image{
   font-size: 1.5rem;
   padding: 0 2rem 2rem;
   text-align: justify;
+  flex: 1 1 auto;
+}
+
+.InfoCard--Footer{
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
