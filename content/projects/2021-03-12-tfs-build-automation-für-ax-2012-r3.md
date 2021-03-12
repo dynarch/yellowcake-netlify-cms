@@ -20,7 +20,7 @@ meta:
   title: Automated builds TFS 2017
   description: TFS automated build AX2012
 ---
-## Beschreibung 
+## Beschreibung
 
 Einrichten automatische Builds für AX2012 R3 im On-Premises Version von TFS 2017. Build Definitionen wurden für verschiedene Umgebungen eingerichtet: Dev, Test, Staging und Produktion. Projekt Vorlagen und Work Item Templates (WIT) mit wit-admin gemäß Entwicklungsprozessen (zusätzliche Status wie Entwicklung fertig, Bereit zum Testen, Test erfolgreich usw.) wurden angepasst.
 

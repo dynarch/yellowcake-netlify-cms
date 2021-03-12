@@ -21,7 +21,7 @@ import Layout from '../components/Layout'
  */
 export const byDate = projects => {
   const now = Date.now()
-  return projects.filter(projects => Date.parse(projects.date) <= now)
+  return projects.filter(projects => Date.parse(projects.edges.node.frontMatter.startDate) <= now)
 }
 
 /**
@@ -30,27 +30,44 @@ export const byDate = projects => {
  * @param {contentType} string
  */
 
+// const filterBy = ({filterObject, filterColumn, filterValue}) => {
+//   filterObject.foreach()
+// }
+
 // Export Template for use in CMS preview
 export const ProjectIndexTemplate = ({
   title,
   subtitle,
   featuredImage,
   projects = [],
+  filteredProjects = [],
   enableSearch = true,
   contentType
 }) => (
   <Location>
     {({ location }) => {
-      let filteredProjects = projects
+      let filteredByExcerptProjects = projects
+      let filteredByTitleProjects = projects
+      let filteredByToolsProjects = projects
+      let filteredByFieldsProjects = projects
 
       let queryObj = location.search.replace('?', '')
       queryObj = qs.parse(queryObj)
 
       if (enableSearch && queryObj.s) {
         const searchTerm = queryObj.s.toLowerCase()
-        filteredProjects = filteredProjects.filter(projects =>
-          projects.frontmatter.excerp.toLowerCase().includes(searchTerm)
+        filteredByExcerptProjects = filteredByExcerptProjects.filter(projects =>
+          projects.frontmatter.excerpt.toLowerCase().includes(searchTerm)
         )
+        filteredByTitleProjects = filteredByTitleProjects.filter(projects =>
+          projects.frontmatter.title.toLowerCase().includes(searchTerm)
+        )
+        filteredByToolsProjects = filteredByToolsProjects.filter(projects =>
+          projects.frontmatter.tools.filter(tool=>
+            tool.description.toLowerCase().includes(searchTerm))
+        )
+
+        filteredByFieldsProjects = [...new Set([...filteredByExcerptProjects, ...filteredByTitleProjects, filteredByToolsProjects])];
       }
 
       return (
@@ -72,7 +89,7 @@ export const ProjectIndexTemplate = ({
           {!!projects.length && (
             <section className="section">
               <div className="container">
-                <ProjectSection projects={filteredProjects} />
+                <ProjectSection projects={filteredByFieldsProjects} />
               </div>
             </section>
           )}
@@ -83,7 +100,7 @@ export const ProjectIndexTemplate = ({
 )
 
 // Export Default ProjectIndex for front-end
-const ProjectIndex = ({ data: { page, projects } }) => (
+const ProjectIndex = ({ data: { page, projects, filteredProjects } }) => (
   <Layout
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
@@ -93,6 +110,11 @@ const ProjectIndex = ({ data: { page, projects } }) => (
       {...page.fields}
       {...page.frontmatter}
       projects={projects.edges.map(projects => ({
+        ...projects.node,
+        ...projects.node.frontmatter,
+        ...projects.node.fields
+      }))}
+      filteredProjects={filteredProjects.edges.map(projects => ({
         ...projects.node,
         ...projects.node.frontmatter,
         ...projects.node.fields
@@ -139,6 +161,25 @@ export const pageQuery = graphql`
             startDate
             endDate
             featuredImage
+            company
+            excerpt
+            tools {
+              description
+            }
+          }
+        }
+      }
+    }
+
+    filteredProjects: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "projects" } } }
+      sort: { order: DESC, fields: [frontmatter___startDate] }
+    ) {
+      edges {
+        node {
+          excerpt
+          frontmatter {
+            title
             company
             excerpt
           }

@@ -20,7 +20,7 @@ meta:
   title: Webshop Intgration with AX 2012
   description: Webshop RESTful Services Intgration with AX 2012
 ---
-## Beschreibung 
+## Beschreibung
 
 Integration mit Dynamics AX 2012 R3 – PHP-basierend RESTful Services in JSON Format.
 
