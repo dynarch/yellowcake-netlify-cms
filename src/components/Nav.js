@@ -112,6 +112,35 @@ export class Navigation extends Component {
             </div>
             <div
               className={`Nav--Group ${
+                this.state.activeSubNav === 'ExperiencePages' ? 'active' : ''
+              }`}
+            >
+              <span
+                className={`NavLink Nav--GroupParent ${
+                  this.props.location.pathname.includes('projects') ||
+                  this.props.location.pathname.includes('experience')
+                    ? 'active'
+                    : ''
+                }`}
+                onClick={() => this.toggleSubNav('ExperiencePages')}
+                onKeyDown={e => this.keyToggleSubNav(e, 'ExperiencePages')}
+                tabIndex={0}
+                aria-label="Navigation"
+                role="button"
+              >
+                Berufserfahrung
+                <div className="Nav--GroupLinks">
+                  <NavLink to="/projects/" className="Nav--GroupLink">
+                    Projekte
+                  </NavLink>
+                  <NavLink to="/experience/" className="Nav--GroupLink">
+                    Werdegang
+                  </NavLink>
+                </div>
+              </span>
+            </div>
+            <div
+              className={`Nav--Group ${
                 this.state.activeSubNav === 'infoPages' ? 'active' : ''
               }`}
             >
@@ -140,7 +169,6 @@ export class Navigation extends Component {
               </span>
             </div>
             <NavLink to="/contact/">Contact</NavLink>
-            <NavLink to="/projects/">Projects</NavLink>
             <NavLink to="/service/">Leistungen</NavLink>
             <NavLink to="/about/">Über mich</NavLink>
           </div>

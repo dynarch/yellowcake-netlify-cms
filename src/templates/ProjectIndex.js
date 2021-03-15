@@ -48,7 +48,6 @@ export const ProjectIndexTemplate = ({
     {({ location }) => {
       let filteredByExcerptProjects = projects
       let filteredByTitleProjects = projects
-      let filteredByToolsProjects = projects
       let filteredByFieldsProjects = projects
 
       let queryObj = location.search.replace('?', '')
@@ -56,18 +55,14 @@ export const ProjectIndexTemplate = ({
 
       if (enableSearch && queryObj.s) {
         const searchTerm = queryObj.s.toLowerCase()
-        filteredByExcerptProjects = filteredByExcerptProjects.filter(projects =>
-          projects.frontmatter.excerpt.toLowerCase().includes(searchTerm)
+        filteredByExcerptProjects = filteredByExcerptProjects.filter(project =>
+          project.frontmatter.excerpt.toLowerCase().includes(searchTerm)
         )
-        filteredByTitleProjects = filteredByTitleProjects.filter(projects =>
-          projects.frontmatter.title.toLowerCase().includes(searchTerm)
+        filteredByTitleProjects = filteredByTitleProjects.filter(project =>
+          project.frontmatter.title.toLowerCase().includes(searchTerm)
         )
-        filteredByToolsProjects = filteredByToolsProjects.filter(projects =>
-          projects.frontmatter.tools.filter(tool=>
-            tool.description.toLowerCase().includes(searchTerm))
-        )
-
-        filteredByFieldsProjects = [...new Set([...filteredByExcerptProjects, ...filteredByTitleProjects, filteredByToolsProjects])];
+          
+        filteredByFieldsProjects = [...new Set([...filteredByExcerptProjects, ...filteredByTitleProjects])];
       }
 
       return (
@@ -100,7 +95,7 @@ export const ProjectIndexTemplate = ({
 )
 
 // Export Default ProjectIndex for front-end
-const ProjectIndex = ({ data: { page, projects, filteredProjects } }) => (
+const ProjectIndex = ({ data: { page, projects } }) => (
   <Layout
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
@@ -110,11 +105,6 @@ const ProjectIndex = ({ data: { page, projects, filteredProjects } }) => (
       {...page.fields}
       {...page.frontmatter}
       projects={projects.edges.map(projects => ({
-        ...projects.node,
-        ...projects.node.frontmatter,
-        ...projects.node.fields
-      }))}
-      filteredProjects={filteredProjects.edges.map(projects => ({
         ...projects.node,
         ...projects.node.frontmatter,
         ...projects.node.fields
@@ -166,22 +156,6 @@ export const pageQuery = graphql`
             tools {
               description
             }
-          }
-        }
-      }
-    }
-
-    filteredProjects: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "projects" } } }
-      sort: { order: DESC, fields: [frontmatter___startDate] }
-    ) {
-      edges {
-        node {
-          excerpt
-          frontmatter {
-            title
-            company
-            excerpt
           }
         }
       }

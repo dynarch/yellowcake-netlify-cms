@@ -9,7 +9,7 @@ backend:
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
 
-display_url: https://friendly-wozniak-957460.netlify.app # This url will display in the top-right of the CMS
+display_url: https://architect-dynamics.netlify.app # This url will display in the top-right of the CMS
 
 # locale: 'de'
 

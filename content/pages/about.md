@@ -15,6 +15,17 @@ skills:
     yearsUsed: 12
     level: Expert
 ---
+Seit 2002 bin ich in IT-Sphere tätig. Ich habe mit den C++ Projekten angefangen. Damals waren die Projekte von Videobearbeitung.
+
+Im Jahr 2003 habe ich in meinem ersten C#.NET Projekt teigenommen.
+
+Ab Jahr 2004 arbeitete ich mit Microsoft Buzsiness Solutions Axapta 3.0 / Dynamics AX 4 / Dynamics AX 2009 / Dynamics AX 2012 R3 / Dynamics 365 for Finance and Operations.
+
+Zwischen 2004 und 2007 habe ich Service Packs für Microsoft Axapta 3.0 / 4.0 gelifert.
+Ab Jahr 2007 nahm ich in unterschiedlichen EInführungsprojekten als Entwickler, Team Lead und Solutions Architect für AX teil.
+
+
+
 | Skill  | Erfahrung (Jahre) | Verwendet bis | Stufe  |
 |--------|-------------------|---------------|--------|
 | X++    | 14                | 2021          | Expert |

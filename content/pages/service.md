@@ -12,17 +12,17 @@ products:
     # featuredImage: /images/logo_D365FO.png
     title: Microsoft Dynamics 365 Finance and Operations
     button: 
-    - ref: "/projects/"
+    - ref: "/projects/?s=Dynamics AX"
       text: Projekte
     description: Mit Microsoft Dynamics 365 Finance and Operations (ehemals Microsoft Dynamics AX 2012 / 2009, Microsoft Dynamics AX 4.0 / Microsoft Dynamics Axapta 3.0 ) bin ich seit Jahr 2004 tätig. Als externer Service Provider für Microsoft fange ich an, Service Packs für Version 3.0 zu liefern, seitdem gab es viele Projekte, wo ich in die gesamten Produkt Lebenskeis engagiert war.
   - name: Microsoft Power Platform
     featuredImage: https://ucarecdn.com/91fd52ae-ca37-459c-a0c4-cfd3d1bc4b6c/
     title: Microsoft Power Platform
     button: 
-    - ref: "/projects/"
+    - ref: "/projects/?s=Power"
       text: Projekte
     description: >-
-        Power Platform description
+        Projekte auf Basis von Power Plattform: Canvas Apps, Model-Driven Apps, Portals.
   - name: Microsoft Dynamics 365 Customer Engagement
     title: Microsoft Dynamics 365 Customer Engagement
     # featuredImage: /images/logo_D365CE.png
