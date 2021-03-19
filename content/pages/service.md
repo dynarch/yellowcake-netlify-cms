@@ -8,15 +8,23 @@ subtitle: Leistungen
 productsIntro: Ich bin mit folgenden Produkten tätig
 products:
   - name: Microsoft Dynamics 365 Finance and Operations
-    featuredImage: https://ucarecdn.com/c86c9f5e-ddc3-462c-8101-acf581581f77/
+    featuredImage: https://ucarecdn.com/24998f2a-bc03-49c7-bd99-bba2a9939b4a/
     # featuredImage: /images/logo_D365FO.png
     title: Microsoft Dynamics 365 Finance and Operations
     button: 
     - ref: "/projects/?s=Dynamics AX"
       text: Projekte
     description: Mit Microsoft Dynamics 365 Finance and Operations (ehemals Microsoft Dynamics AX 2012 / 2009, Microsoft Dynamics AX 4.0 / Microsoft Dynamics Axapta 3.0 ) bin ich seit Jahr 2004 tätig. Als externer Service Provider für Microsoft fange ich an, Service Packs für Version 3.0 zu liefern, seitdem gab es viele Projekte, wo ich in die gesamten Produkt Lebenskeis engagiert war.
+  - name: Microsoft Dynamics 365 Retail and Commerce
+    title: Microsoft Dynamics 365 Retail and Commerce
+    # featuredImage: /images/logo_D365CE.png
+    featuredImage: https://ucarecdn.com/1fc82602-1bd9-4191-a89a-8da2c1a9ba76/
+    button: 
+    - ref: "/projects/"
+      text: Projekte
+    description: Mit Microsoft Dynamics 365 Retail and Commerce.
   - name: Microsoft Power Platform
-    featuredImage: https://ucarecdn.com/91fd52ae-ca37-459c-a0c4-cfd3d1bc4b6c/
+    featuredImage: https://ucarecdn.com/16ed5f4b-4b62-4388-b749-26ca6971d8ba/
     title: Microsoft Power Platform
     button: 
     - ref: "/projects/?s=Power"
@@ -26,7 +34,7 @@ products:
   - name: Microsoft Dynamics 365 Customer Engagement
     title: Microsoft Dynamics 365 Customer Engagement
     # featuredImage: /images/logo_D365CE.png
-    featuredImage: https://ucarecdn.com/848050dd-d5eb-4786-8828-e0717a8ff335/
+    featuredImage: https://ucarecdn.com/999ee9b9-c22c-46a8-879c-a85a1e733908/
     button: 
     - ref: "/projects/"
       text: Projekte

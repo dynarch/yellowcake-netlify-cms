@@ -7,7 +7,7 @@ import Layout from '../components/Layout'
 import PageHeader from '../components/PageHeader'
 import '../components/InfoSection.css'
 
-export const ServicePageTemplate = ({ title, subtitle, featuredImage, productsIntro, products, body }) => 
+export const ServicePageTemplate = ({ title, subtitle, featuredImage, products, body }) => 
 {
   return (
   <main>
