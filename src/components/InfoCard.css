@@ -8,6 +8,7 @@
   overflow: visible;
   display: flex;
   flex-direction: column;
+  margin-bottom: 100px;
 }
 
 img .InfoCard--Image--Image{
@@ -17,12 +18,8 @@ img .InfoCard--Image--Image{
 
 .InfoCard:hover,
 .InfoCard:focus {
-  transform: scale(1.02);
-  transition: all 0.4s ease-in-out;
+  transform: translateY(-1px);
   box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
-  background: linear-gradient(#180447e3, #231283);
-  color: white;
-  animation: colorBg 0.6s 1;
 }
 
 @keyframes colorBg {
@@ -36,9 +33,16 @@ img .InfoCard--Image--Image{
   }
 }
 
-.InfoCard--Image {
+/* .InfoCard--Image {
   margin: -100px 0 0 0;
   padding-top: 0px;
+  display: inline-block;
+  text-align: center;
+} */
+
+.InfoCard--Image {
+  margin: -50px 0 0 0;
+  padding: 0;
   display: inline-block;
   text-align: center;
 }

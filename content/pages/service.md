@@ -8,13 +8,21 @@ subtitle: Leistungen
 productsIntro: Ich bin mit folgenden Produkten tätig
 products:
   - name: Microsoft Dynamics 365 Finance and Operations
+    title: Microsoft Dynamics 365 Finance and Operations
     featuredImage: https://ucarecdn.com/24998f2a-bc03-49c7-bd99-bba2a9939b4a/
     # featuredImage: /images/logo_D365FO.png
-    title: Microsoft Dynamics 365 Finance and Operations
     button: 
     - ref: "/projects/?s=Dynamics AX"
       text: Projekte
-    description: Mit Microsoft Dynamics 365 Finance and Operations (ehemals Microsoft Dynamics AX 2012 / 2009, Microsoft Dynamics AX 4.0 / Microsoft Dynamics Axapta 3.0 ) bin ich seit Jahr 2004 tätig. Als externer Service Provider für Microsoft fange ich an, Service Packs für Version 3.0 zu liefern, seitdem gab es viele Projekte, wo ich in die gesamten Produkt Lebenskeis engagiert war.
+    description: "
+    Mit Microsoft Dynamics 365 Finance and Operations (ehemals Microsoft Dynamics AX 2012 / 2009, Microsoft Dynamics AX 4.0 / Microsoft Dynamics Axapta 3.0 ) bin ich seit Jahr 2004 tätig. Als externer Service Provider für Microsoft fange ich an, Service Packs für Version 3.0 zu liefern, seitdem gab es viele Projekte, wo ich in die gesamten Produkt Lebenskeis engagiert war.
+
+    ##Architektur
+
+    Design, implementierung, Bereitstellung und die Adoption der gesamten Lösungstechnologie  in Ihre Organisation.
+    ​Lösungskonzipierung, Entwicklung und Unterstützung von Microsoft Dynamics D365 for Finance and Operations / AX für verschiedenen Branchen (Bekleidung & Textil, Stahlrohren, Bankzahlungen, Brauerei, Papierindustrie), Ausarbeiten technischen Einsätzen und Konzipieren von Design des Systems.
+    
+    Erstellen der Systemenlandschaft in Azure Cloud, Verbinden mit externen Systemen mithilfe verschiedenen Technologien (OData, Dual Write, Recurring Integration, Batch Data API)"
   - name: Microsoft Dynamics 365 Retail and Commerce
     title: Microsoft Dynamics 365 Retail and Commerce
     # featuredImage: /images/logo_D365CE.png

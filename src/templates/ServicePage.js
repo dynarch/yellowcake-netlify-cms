@@ -5,6 +5,8 @@ import Content from '../components/Content'
 import InfoCard from '../components/InfoCard'
 import Layout from '../components/Layout'
 import PageHeader from '../components/PageHeader'
+import Popup from '../components/Popup'
+
 import '../components/InfoSection.css'
 
 export const ServicePageTemplate = ({ title, subtitle, featuredImage, products, body }) => 
@@ -19,20 +21,21 @@ export const ServicePageTemplate = ({ title, subtitle, featuredImage, products, 
 
     <section className="section">
       <div className="container">
+        <Content source={body} />
+      </div>
+    </section>
+    <section className="section">
+      <div className="container">
         <div className="InfoSection">
           <div className="InfoSection--Grid">
             {products.map((item, index) => (
-              <InfoCard key={item.title + index} {...item} />
+                <Popup>
+                  <InfoCard key={item.title + index} {...item} />
+                </Popup>
               ))
             }
           </div>
         </div>
-      </div>
-    </section>
-
-    <section className="section">
-      <div className="container">
-        <Content source={body} />
       </div>
     </section>
   </main>

@@ -8,7 +8,7 @@ featuredImage: https://ucarecdn.com/1205a511-4233-4d57-b231-e8ec65178a0b/
 subtitle: Nehmen Sie Kontakt auf
 address: 'Bielefeld, Deutschland'
 phone: +49 521 963 06 366
-email: example@example.com
+email: kontakt@architect-dynamics.de
 locations:
   - lat: '52.05297'
     lng: '8.59845'
@@ -18,12 +18,6 @@ meta:
   title: Contact Page
 ---
 
-## Example contact form
+## Kontakt
 
-This form is setup to use Netlify's form handling:
-
-- the form action is set to the current absolute url: `action: '/contact/'`
-- a name attribute is sent with the form's data `'form-name': 'Contact'`
-- netlify data attributes are added to the form `data-netlify data-netlify-honeypot`
-
-Find out more in the [Netlify Docs](https://www.netlify.com/docs/form-handling/).
+Vielen Dank für Ihr Interesse an meiner Webseite. Setzen Sie sich bitte mit mir in Verbindung, um mehr zu erfahren.
