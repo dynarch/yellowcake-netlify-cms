@@ -2,10 +2,10 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Content from '../components/Content'
-import InfoCard from '../components/InfoCard'
+// import InfoCard from '../components/InfoCard'
 import Layout from '../components/Layout'
 import PageHeader from '../components/PageHeader'
-import Popup from '../components/Popup'
+import InfoCardPopup from '../components/InfoCardPopup'
 
 import '../components/InfoSection.css'
 
@@ -29,9 +29,7 @@ export const ServicePageTemplate = ({ title, subtitle, featuredImage, products, 
         <div className="InfoSection">
           <div className="InfoSection--Grid">
             {products.map((item, index) => (
-                <Popup>
-                  <InfoCard key={item.title + index} {...item} />
-                </Popup>
+                <InfoCardPopup key={item.title + index} {...item} />
               ))
             }
           </div>
@@ -64,10 +62,10 @@ export const pageQuery = graphql`
         title
         subtitle
         featuredImage
-        productsIntro
         products {
           title
           featuredImage
+          excerpt
           description
           button {
             ref

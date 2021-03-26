@@ -4,7 +4,6 @@ import { graphql } from 'gatsby'
 import Content from '../components/Content'
 import Layout from '../components/Layout'
 import PageHeader from '../components/PageHeader'
-import '../components/InfoSection.css'
 
 export const AboutPageTemplate = ({ title, subtitle, featuredImage, skills, body }) => 
 {

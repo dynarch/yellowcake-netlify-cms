@@ -5,7 +5,6 @@ import { Menu, X } from 'react-feather'
 import Logo from './Logo'
 
 import './Nav.css'
-
 export class Navigation extends Component {
   state = {
     active: false,
@@ -48,7 +47,7 @@ export class Navigation extends Component {
           } ${className}`}
           onClick={this.handleLinkClick}
           onKeyDown={this.handleLinkKeyDown}
-          onMouseOver={this.handleLinkClick}
+          onMouseEnter={this.handleLinkClick}
           tabIndex={0}
           aria-label="Navigation"
           role="button"

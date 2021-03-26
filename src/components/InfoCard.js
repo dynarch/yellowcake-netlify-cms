@@ -7,18 +7,28 @@ const InfoCard = ({
     title,
     featuredImage,
     description,
+    excerpt,
     button
 }) => {
     return (
     <div className="InfoCard" >
-        {featuredImage && (
+        { featuredImage && (
             <div className="InfoCard--Image">
                 <img src={featuredImage} alt={title} className="InfoCard--Image--Image" />
             </div>
       )}
         <h2 className="InfoCard--Title">{title}</h2>
-        <Content className='InfoCard--Content' source = {description} />
-        {button && (button.map((item, index) => (
+        { excerpt && (
+            <div className="InfoCard--Content">
+              {excerpt}
+            </div>
+          )
+        }
+        { description && (
+          <Content className='InfoCard--Content' source={description} />
+          )
+        }
+        { button && (button.map((item, index) => (
           <div key={item.text + index} className="InfoCard--Footer">
             <Link to={item.ref} className="Button">{item.text}</Link>
           </div>

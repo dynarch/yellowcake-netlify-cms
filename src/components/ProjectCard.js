@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Image from './Image'
 
-import './ProjectCard.css'
+import './PostCard.css'
 
 const ProjectCard = ({
   featuredImage,
@@ -12,15 +12,15 @@ const ProjectCard = ({
   className = '',
   ...props
 }) => (
-  <Link to={slug} className={`ProjectCard ${className}`}>
+  <Link to={slug} className={`PostCard ${className}`}>
     {featuredImage && (
-      <div className="ProjectCard--Image relative">
+      <div className="PostCard--Image relative">
         <Image background src={featuredImage} alt={title} />
       </div>
     )}
-    <div className="ProjectCard--Content">
-      {title && <h3 className="ProjectCard--Title">{title}</h3>}
-      {excerpt && <div className="ProjectCard--Excerpt">{excerpt}</div>}
+    <div className="PostCard--Content">
+      {title && <h3 className="PostCard--Title">{title}</h3>}
+      {excerpt && <div className="PostCard--Excerpt">{excerpt}</div>}
     </div>
   </Link>
 )

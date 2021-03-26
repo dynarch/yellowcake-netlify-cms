@@ -207,7 +207,6 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Title, name: title, widget: string }
           - { label: Featured Image, name: featuredImage, widget: image }
           - { label: Subtitle, name: subtitle, widget: markdown, required: false }
-          - { label: Products Introduction, name: productsIntro, widget: markdown }
           - label: 'Products'
             name: 'products'
             widget: 'list'
@@ -215,6 +214,7 @@ collections: # A list of collections the CMS should be able to edit
               - { name: name, label: name, widget: string, default: '' }
               - { name: featuredImage, label: Featured Image, widget: image }
               - { name: title, label: title, widget: string, default: '' }
+              - { name: excerpt, label: Excerpt, widget: text }
               - { name: description, label: description, widget: markdown }
               - name: button, 
                 label: button, 
@@ -320,6 +320,84 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Noindex, name: noindex, widget: boolean, required: false }
 
   - name: projects
+    label: Projects
+    editor:
+      preview: true
+    folder: content/projects
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - { label: Template, name: template, widget: hidden, default: SingleProject }
+      - { label: Title, name: title, widget: string }
+      - label: 'Status'
+        name: 'status'
+        widget: 'select'
+        options: ['Accomplished', 'Current', 'Draft']
+        default: 'Accomplished'
+      - { label: Start date, name: startDate, widget: date, format: 'YYYY-MM-DD' }
+      - { label: End date, name: endDate, widget: date, format: 'YYYY-MM-DD', required: false }
+      - { label: Company, name: company, widget: text }
+      - { label: CompanyUrl, name: companyUrl, widget: text }
+      - label: 'Tools'
+        required: false
+        name: 'tools'
+        widget: 'list'
+        fields:
+          - { label: Title, name: name, widget: string }
+          - { label: Description, name: description, widget: text }
+      - { label: Featured Image, name: featuredImage, widget: image, required: false }
+      - { label: Excerpt, name: excerpt, widget: text }
+      - { label: Content, name: body, widget: markdown }
+      - label: 'Meta'
+        required: false
+        name: 'meta'
+        widget: 'object'
+        fields:
+          - { label: Title, name: title, widget: string, required: false }
+          - { label: Description, name: description, widget: text,  required: false }
+          - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
+          - { label: Noindex, name: noindex, widget: boolean, required: false }
+
+    - name: projects
+    label: Projects
+    editor:
+      preview: true
+    folder: content/projects
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - { label: Template, name: template, widget: hidden, default: SingleProject }
+      - { label: Title, name: title, widget: string }
+      - label: 'Status'
+        name: 'status'
+        widget: 'select'
+        options: ['Accomplished', 'Current', 'Draft']
+        default: 'Accomplished'
+      - { label: Start date, name: startDate, widget: date, format: 'YYYY-MM-DD' }
+      - { label: End date, name: endDate, widget: date, format: 'YYYY-MM-DD', required: false }
+      - { label: Company, name: company, widget: text }
+      - { label: CompanyUrl, name: companyUrl, widget: text }
+      - label: 'Tools'
+        required: false
+        name: 'tools'
+        widget: 'list'
+        fields:
+          - { label: Title, name: name, widget: string }
+          - { label: Description, name: description, widget: text }
+      - { label: Featured Image, name: featuredImage, widget: image, required: false }
+      - { label: Excerpt, name: excerpt, widget: text }
+      - { label: Content, name: body, widget: markdown }
+      - label: 'Meta'
+        required: false
+        name: 'meta'
+        widget: 'object'
+        fields:
+          - { label: Title, name: title, widget: string, required: false }
+          - { label: Description, name: description, widget: text,  required: false }
+          - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
+          - { label: Noindex, name: noindex, widget: boolean, required: false }
+
+          - name: projects
     label: Projects
     editor:
       preview: true

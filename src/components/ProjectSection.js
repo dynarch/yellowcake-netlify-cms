@@ -1,7 +1,7 @@
 import React from 'react'
 
 import ProjectCard from './ProjectCard'
-import './ProjectSection.css'
+import './PostSection.css'
 
 class ProjectSection extends React.Component {
   static defaultProps = {
@@ -28,10 +28,10 @@ class ProjectSection extends React.Component {
       visibleProjects = projects.slice(0, limit || projects.length)
 
     return (
-      <div className="ProjectSection">
-        {title && <h2 className="ProjectSection--Title">{title}</h2>}
+      <div className="PostSection">
+        {title && <h2 className="PostSection--Title">{title}</h2>}
         {!!visibleProjects.length && (
-          <div className="ProjectSection--Grid">
+          <div className="PostSection--Grid">
             {visibleProjects.map((project, index) => (
               <ProjectCard key={project.title + index} {...project} />
             ))}
