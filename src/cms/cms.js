@@ -8,10 +8,11 @@ import { AboutPageTemplate } from '../templates/AboutPage'
 import { BlogIndexTemplate } from '../templates/BlogIndex'
 import { ComponentsPageTemplate } from '../templates/ComponentsPage'
 import { ContactPageTemplate } from '../templates/ContactPage'
-import { DefaultPageTemplate } from '../templates/DefaultPage'
+import { EmploymentIndexTemplate } from '../templates/EmploymentIndex'
+import { InfoPageTemplate } from '../templates/InfoPage'
 import { HomePageTemplate } from '../templates/HomePage'
 import { ProjectIndexTemplate } from '../templates/ProjectIndex'
-import { ServicePageTemplate } from '../templates/ServicePage'
+import { ServiceIndexTemplate } from '../templates/ServiceIndex'
 import { SinglePostTemplate } from '../templates/SinglePost'
 import { SingleProjectTemplate } from '../templates/SingleProject'
 import uploadcare from 'netlify-cms-media-library-uploadcare'
@@ -42,8 +43,11 @@ CMS.registerPreviewTemplate('components-page', ({ entry }) => (
 CMS.registerPreviewTemplate('contact-page', ({ entry }) => (
   <ContactPageTemplate {...entry.toJS().data} />
 ))
+CMS.registerPreviewTemplate('employment-page', ({ entry }) => (
+  <EmploymentIndexTemplate {...entry.toJS().data} />
+))
 CMS.registerPreviewTemplate('infoPages', ({ entry }) => (
-  <DefaultPageTemplate {...entry.toJS().data} />
+  <InfoPageTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('home-page', ({ entry }) => (
   <HomePageTemplate {...entry.toJS().data} />
@@ -58,5 +62,5 @@ CMS.registerPreviewTemplate('projects', ({ entry }) => (
   <SingleProjectTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('service-page', ({ entry }) => (
-  <ServicePageTemplate {...entry.toJS().data} />
+  <ServiceIndexTemplate {...entry.toJS().data} />
 ))

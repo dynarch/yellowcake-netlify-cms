@@ -1,27 +1,25 @@
-.InfoCard {
+.ServiceCard {
   text-decoration: none;
-  background: white;
+  background: var(--prmaryBackground);
   color: inherit;
   border: 1px solid var(--borderColor);
   border-radius: var(--borderRadius);
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-  overflow: visible;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 100px;
+  text-align: center;
 }
 
-img .InfoCard--Image--Image{
-  position: relative;
-  height: 200px;
-  width: 200px;
-  opacity: 0.8;
+.ServiceCardPopup {
+  text-decoration: none;
+  background: var(--prmaryBackground);
+  color: inherit;
+  text-align: center;
 }
 
-.InfoCard:hover,
-.InfoCard:focus {
+.ServiceCard:hover,
+.ServiceCard:focus {
   transform: translateY(-1px);
   box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 
 @keyframes colorBg {
@@ -35,35 +33,38 @@ img .InfoCard--Image--Image{
   }
 }
 
-/* .InfoCard--Image {
-  margin: -100px 0 0 0;
-  padding-top: 0px;
-  display: inline-block;
+.ServiceCard--Title {
+  font-size: larger;
   text-align: center;
-} */
+  padding: 2rem 2rem 1rem;
+  flex: 1 1 content;
+}
 
-.InfoCard--Image {
-  margin: -50px 0 0 0;
+.ServiceCard--Image--Container {
+  margin: -5rem 0 0 0;
   padding: 0;
   display: inline-block;
   text-align: center;
 }
 
-.InfoCard--Title {
-  font-size: medium;
-  text-align: center;
-  padding: 2rem 2rem 1rem;
+.ServiceCard--Image{
+  position: relative;
+  height: 200px;
+  width: auto;
+  opacity: 0.8;
+  padding-top: 25px;
 }
 
-.InfoCard--Content {
+.ServiceCard--Content {
   font-size: 1.5rem;
   padding: 0 2rem 2rem;
   text-align: justify;
   flex: 1 1 auto;
 }
 
-.InfoCard--Footer{
+.ServiceCard--Footer{
   text-align: center;
   display: flex;
   justify-content: center;
 }
+

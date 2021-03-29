@@ -4,16 +4,17 @@ import { graphql } from 'gatsby'
 import PageHeader from '../components/PageHeader'
 import Content from '../components/Content'
 import Layout from '../components/Layout'
-import SVGIcon from '../components/SVGIcon'
+import { Link } from 'gatsby'
 
 // Export Template for use in CMS preview
-export const DefaultPageTemplate = ({
+export const InfoPageTemplate = ({
   title,
   subtitle,
   featuredImage,
+  button,
   body
 }) => (
-  <main className="DefaultPage">
+  <main className="InfoPage">
     <PageHeader
       title={title}
       subtitle={subtitle}
@@ -23,24 +24,30 @@ export const DefaultPageTemplate = ({
     <section className="section">
       <div className="container">
         <Content source={body} />
-        <SVGIcon src="/images/calendar.svg" />
       </div>
     </section>
+    { button && (button.map((item, index) => (
+                  <div key={item.text + index} className="ServiceCard--Footer">
+                    <Link to={item.ref} className="Button">{item.text}</Link>
+                  </div>
+                  ))
+                  )
+                }
   </main>
 )
 
-const DefaultPage = ({ data: { page } }) => (
+const InfoPage = ({ data: { page } }) => (
   <Layout
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
   >
-    <DefaultPageTemplate {...page.frontmatter} body={page.html} />
+    <InfoPageTemplate {...page.frontmatter} body={page.html} />
   </Layout>
 )
-export default DefaultPage
+export default InfoPage
 
 export const pageQuery = graphql`
-  query DefaultPage($id: String!) {
+  query InfoPage($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
       ...Meta
       html

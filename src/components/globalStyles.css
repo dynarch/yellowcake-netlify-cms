@@ -1,6 +1,7 @@
 :root {
   /* --primary: linear-gradient(#180447e3, #231283); */
   --primary: #00c2bd;
+  --prmaryBackground: white;
   --secondary: #000;
   --lightGrey: whitesmoke;
   --midGrey: #cacaca;
@@ -40,7 +41,7 @@ body {
   font-family: var(--font-system);
   min-height: 100%;
   position: relative;
-  background: white;
+  background: var(--prmaryBackground);
   /* background:  #e1e9e8; */
   color: var(--secondary);
   font-size: 1.6em;

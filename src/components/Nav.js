@@ -47,7 +47,6 @@ export class Navigation extends Component {
           } ${className}`}
           onClick={this.handleLinkClick}
           onKeyDown={this.handleLinkKeyDown}
-          onMouseEnter={this.handleLinkClick}
           tabIndex={0}
           aria-label="Navigation"
           role="button"
@@ -129,6 +128,9 @@ export class Navigation extends Component {
               >
                 Berufserfahrung
                 <div className="Nav--GroupLinks">
+                  <NavLink to="/highlights/" className="Nav--GroupLink">
+                    Qualifikationshöhepunkte
+                  </NavLink>
                   <NavLink to="/projects/" className="Nav--GroupLink">
                     Projekte
                   </NavLink>
@@ -156,19 +158,18 @@ export class Navigation extends Component {
                 aria-label="Navigation"
                 role="button"
               >
-                Info
+                Leistungen
                 <div className="Nav--GroupLinks">
-                  <NavLink to="/default/" className="Nav--GroupLink">
-                    Default
+                  <NavLink to="/service/" className="Nav--GroupLink">
+                    Bereiche
                   </NavLink>
                   <NavLink to="/commerce/" className="Nav--GroupLink">
-                    Commerce
+                    Preise und Verfügbarkeit
                   </NavLink>
                 </div>
               </span>
             </div>
-            <NavLink to="/contact/">Contact</NavLink>
-            <NavLink to="/service/">Leistungen</NavLink>
+            <NavLink to="/contact/">Kontakt</NavLink>
             <NavLink to="/about/">Über mich</NavLink>
           </div>
           <button

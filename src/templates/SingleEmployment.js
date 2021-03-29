@@ -7,25 +7,24 @@ import Content from '../components/Content'
 import Layout from '../components/Layout'
 import './SinglePost.css'
 
-export const SingleProjectTemplate = ({
+export const SingleEmploymentTemplate = ({
   title,
   startDate,
   endDate,
   company,
   companyUrl,
-  tools,
   body,
-  nextProjectURL,
-  prevProjectURL
+  nextEmploymentURL,
+  prevEmploymentURL
 }) => (
   <main>
     <article
       className="SinglePost section light"
       itemScope
-      itemType="http://schema.org/BlogProjecting"
+      itemType="http://schema.org/BlogEmploymenting"
     >
       <div className="container skinny">
-        <Link className="SinglePost--BackButton" to="/project/">
+        <Link className="SinglePost--BackButton" to="/employment/">
           <ChevronLeft /> BACK
         </Link>
         <div className="SinglePost--Content relative">
@@ -35,20 +34,20 @@ export const SingleProjectTemplate = ({
             </h1>
           )}
           <div className="SinglePost--Pagination">
-            {prevProjectURL && (
+            {prevEmploymentURL && (
               <Link
                 className="SinglePost--Pagination--Link prev"
-                to={prevProjectURL}
+                to={prevEmploymentURL}
               >
-                Vorheriges Projekt
+                Vorherige Anstellung
               </Link>
             )}
-            {nextProjectURL && (
+            {nextEmploymentURL && (
               <Link
                 className="SinglePost--Pagination--Link next"
-                to={nextProjectURL}
+                to={nextEmploymentURL}
               >
-                Nächtes Projekt
+                Nächte Anstellung
               </Link>
             )}
           </div>
@@ -60,9 +59,9 @@ export const SingleProjectTemplate = ({
               </th>
               <td>
                 {company && (
-                  <a className="SinglePost--SubTitle" href={companyUrl} target="_blank" rel="noreferrer">
+                  <Link className="SinglePost--SubTitle" to={companyUrl} target="_blank" >
                     {company}
-                  </a>
+                  </Link>
                 )}
               </td>
             </tr>
@@ -101,25 +100,25 @@ export const SingleProjectTemplate = ({
             )}
           </table>
 
-          <div className="SingleProject--InnerContent">
+          <div className="SingleEmployment--InnerContent">
             <Content source={body} />
           </div>
 
           <div className="SinglePost--Pagination">
-            {prevProjectURL && (
+            {prevEmploymentURL && (
               <Link
                 className="SinglePost--Pagination--Link prev"
-                to={prevProjectURL}
+                to={prevEmploymentURL}
               >
-                Vorheriges Projekt
+                Vorherige Anstellung
               </Link>
             )}
-            {nextProjectURL && (
+            {nextEmploymentURL && (
               <Link
                 className="SinglePost--Pagination--Link next"
-                to={nextProjectURL}
+                to={nextEmploymentURL}
               >
-                Nächtes Projekt
+                Nächte Anstellung
               </Link>
             )}
           </div>
@@ -129,34 +128,34 @@ export const SingleProjectTemplate = ({
   </main>
 )
 
-// Export Default SingleProject for front-end
-const SingleProject = ({ data: { project, allProjects } }) => {
-  const thisEdge = allProjects.edges.find(edge => edge.node.id === project.id)
+// Export Default SingleEmployment for front-end
+const SingleEmployment = ({ data: { employment, allEmployments } }) => {
+  const thisEdge = allEmployments.edges.find(edge => edge.node.id === employment.id)
   return (
     <Layout
-      meta={project.frontmatter.meta || false}
-      title={project.frontmatter.title || false}
+      meta={employment.frontmatter.meta || false}
+      title={employment.frontmatter.title || false}
     >
-      <SingleProjectTemplate
-        {...project}
-        {...project.frontmatter}
-        body={project.html}
-        nextProjectURL={_get(thisEdge, 'next.fields.slug')}
-        prevProjectURL={_get(thisEdge, 'previous.fields.slug')}
+      <SingleEmploymentTemplate
+        {...employment}
+        {...employment.frontmatter}
+        body={employment.html}
+        nextEmploymentURL={_get(thisEdge, 'next.fields.slug')}
+        prevEmploymentURL={_get(thisEdge, 'previous.fields.slug')}
       />
     </Layout>
   )
 }
 
-export default SingleProject
+export default SingleEmployment
 
 export const pageQuery = graphql`
-  ## Query for SingleProject data
+  ## Query for SingleEmployment data
   ## Use GraphiQL interface (http://localhost:8000/___graphql)
   ## $id is processed via gatsby-node.js
   ## query name must be unique to this file
-  query SingleProject($id: String!) {
-    project: markdownRemark(id: { eq: $id }) {
+  query SingleEmployment($id: String!) {
+    employment: markdownRemark(id: { eq: $id }) {
       ...Meta
       html
       id
@@ -169,16 +168,16 @@ export const pageQuery = graphql`
         featuredImage
         company
         companyUrl
-        tools {
-          name
-          description
-        }
         excerpt
+        button {
+          text
+          ref
+        }
       }
     }
 
-    allProjects: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "projects" } } }
+    allEmployments: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "employments" } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {
