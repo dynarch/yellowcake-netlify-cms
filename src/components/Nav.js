@@ -86,6 +86,8 @@ export class Navigation extends Component {
                     : ''
                 }`}
                 onClick={() => this.toggleSubNav('posts')}
+                onMouseEnter={() => this.toggleSubNav('posts')}
+                onMouseLeave={() => this.toggleSubNav('posts')}
                 onKeyDown={e => this.keyToggleSubNav(e, 'posts')}
                 tabIndex={0}
                 aria-label="Navigation"
@@ -121,6 +123,8 @@ export class Navigation extends Component {
                     : ''
                 }`}
                 onClick={() => this.toggleSubNav('ExperiencePages')}
+                onMouseEnter={() => this.toggleSubNav('ExperiencePages')}
+                onMouseLeave={() => this.toggleSubNav('ExperiencePages')}
                 onKeyDown={e => this.keyToggleSubNav(e, 'ExperiencePages')}
                 tabIndex={0}
                 aria-label="Navigation"
@@ -134,7 +138,7 @@ export class Navigation extends Component {
                   <NavLink to="/projects/" className="Nav--GroupLink">
                     Projekte
                   </NavLink>
-                  <NavLink to="/experience/" className="Nav--GroupLink">
+                  <NavLink to="/employment/" className="Nav--GroupLink">
                     Werdegang
                   </NavLink>
                 </div>
@@ -153,6 +157,8 @@ export class Navigation extends Component {
                     : ''
                 }`}
                 onClick={() => this.toggleSubNav('infoPages')}
+                onMouseEnter={() => this.toggleSubNav('infoPages')}
+                onMouseLeave={() => this.toggleSubNav('infoPages')}
                 onKeyDown={e => this.keyToggleSubNav(e, 'infoPages')}
                 tabIndex={0}
                 aria-label="Navigation"

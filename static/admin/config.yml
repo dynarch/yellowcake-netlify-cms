@@ -153,11 +153,11 @@ collections: # A list of collections the CMS should be able to edit
               - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
               - { label: Noindex, name: noindex, widget: boolean, required: false }
 
-      - file: 'content/pages/employmentHistory.md'
+      - file: 'content/pages/employment.md'
         label: 'Werdegang'
         name: 'employment-page'
         fields:
-          - { label: Template, name: template, widget: hidden, default: EmploymentIndex }
+          - { label: Template, name: template, widget: hidden, default: EmploymentPage }
           - { label: Slug, name: slug, widget: hidden, default: '' }
           - { label: Title, name: title, widget: string }
           - { label: Featured Image, name: featuredImage, widget: image }

@@ -1,6 +1,6 @@
 .ServiceCard {
   text-decoration: none;
-  background: var(--prmaryBackground);
+  background: var(--primaryBackground);
   color: inherit;
   border: 1px solid var(--borderColor);
   border-radius: var(--borderRadius);
@@ -10,7 +10,7 @@
 
 .ServiceCardPopup {
   text-decoration: none;
-  background: var(--prmaryBackground);
+  background: var(--primaryBackground);
   color: inherit;
   text-align: center;
 }

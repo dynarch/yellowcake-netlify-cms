@@ -8,7 +8,7 @@ import { AboutPageTemplate } from '../templates/AboutPage'
 import { BlogIndexTemplate } from '../templates/BlogIndex'
 import { ComponentsPageTemplate } from '../templates/ComponentsPage'
 import { ContactPageTemplate } from '../templates/ContactPage'
-import { EmploymentIndexTemplate } from '../templates/EmploymentIndex'
+import { EmploymentPageTemplate } from '../templates/EmploymentPage'
 import { InfoPageTemplate } from '../templates/InfoPage'
 import { HomePageTemplate } from '../templates/HomePage'
 import { ProjectIndexTemplate } from '../templates/ProjectIndex'
@@ -44,7 +44,7 @@ CMS.registerPreviewTemplate('contact-page', ({ entry }) => (
   <ContactPageTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('employment-page', ({ entry }) => (
-  <EmploymentIndexTemplate {...entry.toJS().data} />
+  <EmploymentPageTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('infoPages', ({ entry }) => (
   <InfoPageTemplate {...entry.toJS().data} />

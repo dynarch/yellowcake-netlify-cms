@@ -8,7 +8,7 @@ import EmploymentCard from '../components/EmploymentCard'
 
 import '../components/PostSection.css'
 
-export const EmploymentIndexTemplate = ({ title, subtitle, featuredImage, employments, body }) => 
+export const EmploymentPageTemplate = ({ title, subtitle, featuredImage, employments, body }) => 
 {
   return (
   <main>
@@ -25,25 +25,23 @@ export const EmploymentIndexTemplate = ({ title, subtitle, featuredImage, employ
     </section>
     <section className="section">
       <div className="container">
-        <div className='EmploymentSection--Grid'>
           {employments.map((item, index) => (
               <EmploymentCard key={item.title + index} {...item} />
             ))
           }
-        </div>
       </div>
     </section>
   </main>
   )
 }
 
-// Export Default EmploymentIndex for front-end
-const EmploymentIndex = ({ data: { page, employments } }) => (
+// Export Default EmploymentPage for front-end
+const EmploymentPage = ({ data: { page, employments } }) => (
   <Layout
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
   >
-    <EmploymentIndexTemplate 
+    <EmploymentPageTemplate 
       {...page} 
       {...page.frontmatter} 
       body={page.html}
@@ -57,14 +55,14 @@ const EmploymentIndex = ({ data: { page, employments } }) => (
   </Layout>
 )
 
-export default EmploymentIndex
+export default EmploymentPage
 
 export const pageQuery = graphql`
-  ## Query for EmploymentIndex data
+  ## Query for EmploymentPage data
   ## Use GraphiQL interface (http://localhost:8000/___graphql)
   ## $id is processed via gatsby-node.js
   ## query name must be unique to this file
-  query EmploymentIndex($id: String!) {
+  query EmploymentPage($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
       ...Meta
       html
@@ -81,7 +79,7 @@ export const pageQuery = graphql`
     }
     
     employments: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "employments" } } }
+      filter: { fields: { contentType: { eq: "employment" } } }
       sort: { order: ASC, fields: [frontmatter___sortIndex] }
     ) {
       edges {
@@ -93,6 +91,10 @@ export const pageQuery = graphql`
           frontmatter {
             title
             featuredImage
+            status
+            startDate(formatString: "MMMM Do, YYYY")
+            endDate(formatString: "MMMM Do, YYYY")
+            company
             excerpt
           }
           html

@@ -88,16 +88,6 @@ export const SingleEmploymentTemplate = ({
                 ) : "bis jetzt"}
               </td>
             </tr>
-            {tools && (tools.map((tool, index) => (
-              <tr key={tool.name+index}>
-              <th>
-                {tool.name}
-              </th>
-              <td>
-                {tool.description}
-              </td>
-            </tr>))
-            )}
           </table>
 
           <div className="SingleEmployment--InnerContent">
@@ -139,7 +129,7 @@ const SingleEmployment = ({ data: { employment, allEmployments } }) => {
       <SingleEmploymentTemplate
         {...employment}
         {...employment.frontmatter}
-        body={employment.html}
+        {...employment.html}
         nextEmploymentURL={_get(thisEdge, 'next.fields.slug')}
         prevEmploymentURL={_get(thisEdge, 'previous.fields.slug')}
       />

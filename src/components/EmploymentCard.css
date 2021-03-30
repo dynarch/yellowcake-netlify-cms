@@ -1,0 +1,100 @@
+.Contact {
+}
+
+.Contact--Details--Left {
+  margin-top: 3rem;
+  width: 40%;
+}
+
+.Contact--Details--Right {
+  margin-top: 3rem;
+  width: 60%;
+}
+
+
+.Contact--Details--Item {
+  display: flex;
+  padding: 2rem 0;
+  border-top: 1px solid var(--lightGrey);
+  font-weight: 500;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease-in-out;
+}
+
+.Contact--Details--Item:hover,
+.Contact--Details--Item:focus {
+  color: var(--primary);
+}
+
+.Contact--Details--Item svg {
+  margin-right: 1.5rem;
+  color: var(--primary);
+}
+
+@media (min-width: 750px) {
+  .Contact--Section1--Container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .Contact--Section1--Container > * {
+    width: calc(50% - 2rem);
+  }
+}
+
+.EmploymentCard {
+  width: 100%;
+  text-decoration: none;
+  background: var(--primaryBackground);
+  color: inherit;
+  border: var(--boxBorderBase);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--boxShadowBase);
+  transition: var(--boxTransition);
+  display: flex;
+  flex-direction: row;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.EmploymentCard--Image svg {
+  margin: 1.5rem;
+  height: 50px;
+  color: var(--primary);
+}
+
+.EmploymentCard:hover,
+.EmploymentCard:focus {
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
+}
+
+.EmploymentCard--Image {
+  height: 100%;
+  margin: 0 0 2rem 0;
+  flex: 1 0 10%;
+  order: 1
+}
+
+.EmploymentCard--Title {
+  margin: 1rem;
+  flex: 1 1 30%;
+  order: 2;
+}
+
+.EmploymentCard--Company {
+  margin: 1rem;
+  flex: 1 1 300px;
+  order: 3
+}
+
+.EmploymentCard--DateInterval {
+  margin: 1rem;
+}
+
+.EmploymentCard--Content {
+  padding: 0 2.5rem 2.5rem;
+  flex: 1 1 60%;
+  order: 5
+}
