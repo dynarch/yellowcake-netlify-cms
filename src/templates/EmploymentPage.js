@@ -95,6 +95,8 @@ export const pageQuery = graphql`
             startDate(formatString: "MMMM Do, YYYY")
             endDate(formatString: "MMMM Do, YYYY")
             company
+            companyUrl
+            position
             excerpt
           }
           html

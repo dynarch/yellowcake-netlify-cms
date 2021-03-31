@@ -13,7 +13,8 @@ export const SingleEmploymentTemplate = ({
   endDate,
   company,
   companyUrl,
-  body,
+  position,
+  html,
   nextEmploymentURL,
   prevEmploymentURL
 }) => (
@@ -88,10 +89,18 @@ export const SingleEmploymentTemplate = ({
                 ) : "bis jetzt"}
               </td>
             </tr>
+            <tr>
+              <th>
+                Position:
+              </th>
+              <td>
+                {position}
+              </td>
+            </tr>
           </table>
 
           <div className="SingleEmployment--InnerContent">
-            <Content source={body} />
+            <Content source={html} />
           </div>
 
           <div className="SinglePost--Pagination">
@@ -158,6 +167,7 @@ export const pageQuery = graphql`
         featuredImage
         company
         companyUrl
+        position
         excerpt
         button {
           text

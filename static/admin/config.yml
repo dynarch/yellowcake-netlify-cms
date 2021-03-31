@@ -255,6 +255,7 @@ collections: # A list of collections the CMS should be able to edit
         default: 'Accomplished'
       - { label: Start date, name: startDate, widget: date, format: 'YYYY-MM-DD' }
       - { label: End date, name: endDate, widget: date, format: 'YYYY-MM-DD', required: false }
+      - { label: Position, name: position, widget: text }
       - { label: Company, name: company, widget: text }
       - { label: CompanyUrl, name: companyUrl, widget: text }
       - { label: Featured Image, name: featuredImage, widget: image, required: false }

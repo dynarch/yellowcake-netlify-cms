@@ -113,6 +113,11 @@ blockquote {
   border-left: 2px solid var(--primary);
 }
 
+svg {
+  margin-right: 1.5rem;
+  color: var(--primary);
+}
+
 /* Utility Classes */
 .light {
   background-color: var(--lightGrey);

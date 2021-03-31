@@ -1,49 +1,3 @@
-.Contact {
-}
-
-.Contact--Details--Left {
-  margin-top: 3rem;
-  width: 40%;
-}
-
-.Contact--Details--Right {
-  margin-top: 3rem;
-  width: 60%;
-}
-
-
-.Contact--Details--Item {
-  display: flex;
-  padding: 2rem 0;
-  border-top: 1px solid var(--lightGrey);
-  font-weight: 500;
-  text-decoration: none;
-  color: inherit;
-  transition: color 0.2s ease-in-out;
-}
-
-.Contact--Details--Item:hover,
-.Contact--Details--Item:focus {
-  color: var(--primary);
-}
-
-.Contact--Details--Item svg {
-  margin-right: 1.5rem;
-  color: var(--primary);
-}
-
-@media (min-width: 750px) {
-  .Contact--Section1--Container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-
-  .Contact--Section1--Container > * {
-    width: calc(50% - 2rem);
-  }
-}
-
 .EmploymentCard {
   width: 100%;
   text-decoration: none;
@@ -54,15 +8,9 @@
   box-shadow: var(--boxShadowBase);
   transition: var(--boxTransition);
   display: flex;
-  flex-direction: row;
-  flex-flow: row;
-  flex-wrap: wrap;
-}
-
-.EmploymentCard--Image svg {
-  margin: 1.5rem;
-  height: 50px;
-  color: var(--primary);
+  flex-direction: column;
+  margin-bottom: 3rem;
+  padding: 2rem;
 }
 
 .EmploymentCard:hover,
@@ -70,31 +18,43 @@
   box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
 }
 
-.EmploymentCard--Image {
-  height: 100%;
-  margin: 0 0 2rem 0;
-  flex: 1 0 10%;
-  order: 1
+.EmploymentCard--Details--Row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.EmploymentCard--Details--Left {
+  padding: 1rem 1rem 1rem;
+  display: block;
+  width: 35%;
+}
+
+.EmploymentCard--Details--Right {
+  padding: 1rem 3rem 1rem 1rem;
+  display: block;
+  width: 65%;
+}
+
+.EmploymentCard--Details--Item {
+  display: inline-block;
+  text-align: justify;
+  align-content: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--lightGrey);
+  text-decoration: none;
+  color: inherit;
+}
+
+a.EmploymentCard--Details--Item:hover,
+a.EmploymentCard--Details--Item:focus{
+  transition: color 0.2s ease-in-out;
+  color: var(--primary);
 }
 
 .EmploymentCard--Title {
-  margin: 1rem;
+  margin: 0 0 0 1rem;
   flex: 1 1 30%;
   order: 2;
-}
-
-.EmploymentCard--Company {
-  margin: 1rem;
-  flex: 1 1 300px;
-  order: 3
-}
-
-.EmploymentCard--DateInterval {
-  margin: 1rem;
-}
-
-.EmploymentCard--Content {
-  padding: 0 2.5rem 2.5rem;
-  flex: 1 1 60%;
-  order: 5
 }

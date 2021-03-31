@@ -1,6 +1,6 @@
 import React from 'react'
 import CMS from 'netlify-cms-app'
-// import { de } from 'netlify-cms-locales';
+import { de } from 'netlify-cms-locales';
 
 import './cms-utils'
 
@@ -18,7 +18,7 @@ import { SingleProjectTemplate } from '../templates/SingleProject'
 import uploadcare from 'netlify-cms-media-library-uploadcare'
 
 CMS.registerMediaLibrary(uploadcare)
-// CMS.registerLocale('de', de);
+CMS.registerLocale('de', de);
 
 if (
   window.location.hostname === 'localhost' &&
