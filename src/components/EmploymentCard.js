@@ -18,7 +18,7 @@ const EmploymentCard = ({
   position,
   button
 }) => (
-  <Link to={slug} className="EmploymentCard">
+  <div className="EmploymentCard">
     <div className='EmploymentCard--Details--Row'>
       {title    && <h2 className="EmploymentCard--Title">{title}</h2>}
     </div>
@@ -66,12 +66,15 @@ const EmploymentCard = ({
         </div>
       </div>
       <div  className="EmploymentCard--Details--Right">
-        <div className="EmploymentCard--Details--Item">
-          <Content source={html} />
-        </div>tp
+        <div className="EmploymentCard--Details--Row">
+          <div className="EmploymentCard--Details--Item">
+            <Content source={html} />
+            <Link to={slug} className="EmploymentCard--Details--Item">Mehr erfahren...</Link>
+          </div>
+        </div>
       </div>
     </div>
-  </Link>
+    </div>
 )
 
 export default EmploymentCard

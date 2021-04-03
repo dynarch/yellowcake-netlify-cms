@@ -8,7 +8,13 @@ endDate:
 company: Freiberufler
 companyUrl: 
 position: Freiberuflicher Lösungsarchitekt
-excerpt: Einführen **Dynamics 365 Finance and Operations** On-Cloud & Retail & Marketing
+excerpt: Seit Juli bin ich freiberuflich tätig für die Projekte auf Basis von Microsoft Dynamics 365 for Finance and Supply Chain / Finance and Operations / Dynamics AX 2012 tätig. 
+button:
+  - text: Projekte
+    ref: /projects/?s=freelance
+meta:
+  title: Freiberufler
+  description: Freiberufler Tätigkeit
 sortIndex: 2
 ---
 ### Beschreibung

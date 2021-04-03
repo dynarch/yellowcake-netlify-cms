@@ -8,7 +8,13 @@ endDate: 2014-12-31
 company: Plusserver AG
 companyUrl: https://plusserver.de
 position: Senior Axapta Developer
-excerpt: Einführen **Microsoft Dynamics AX20212 R3** 
+excerpt: ntwickeln von AX 2012 R2 Anwendung nach dem Upgrade von der Version 3.0 während der Stabilisierungsphase.
+button:
+  - text: Projekte
+    ref: /projects/?s=plusserver
+meta:
+  title: Angestellter PlusServer
+  description: Angestellter PLusServer
 sortIndex: 4
 ---
 Entwickeln von AX 2012 R2 Anwendung nach dem Upgrade von der Version 3.0 während der Stabilisierungsphase.

@@ -8,7 +8,13 @@ endDate: 2018-06-30
 company: AlfaPeople GmbH
 companyUrl: https://alfapeople.com/de
 position: Technical Solution Architect / Senior Axapta Developer
-excerpt: Einführen **Dynamics 365 Finance and Operations** On-Cloud & Retail & Marketing
+excerpt: Konzept, Design Entwicklung und Umsetzung von Branchen Lösungen für Bekleidung & Textil, Lösungen für Banking, Papierindustrie, Brauerei.
+button:
+  - text: Projekte
+    ref: /projects/?s=alfapeople
+meta:
+  title: Angestellter AlfaPeople
+  description: Angestellter AlfaPeople
 sortIndex: 3
 ---
 Konzept, Design Entwicklung und Umsetzung von Branchen Lösungen für Bekleidung & Textil, Lösungen für Banking, Papierindustrie, Brauerei.

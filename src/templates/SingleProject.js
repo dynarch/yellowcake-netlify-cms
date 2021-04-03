@@ -25,7 +25,7 @@ export const SingleProjectTemplate = ({
       itemType="http://schema.org/BlogProjecting"
     >
       <div className="container skinny">
-        <Link className="SinglePost--BackButton" to="/project/">
+        <Link className="SinglePost--BackButton" to="/projects/">
           <ChevronLeft /> BACK
         </Link>
         <div className="SinglePost--Content relative">

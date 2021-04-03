@@ -52,7 +52,7 @@ body {
   letter-spacing: 0.01em;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  padding: 0 2rem 2rem 2rem;
+  /* padding: 0 2rem 2rem 2rem; */
 }
 
 a {
@@ -225,7 +225,7 @@ svg {
   border: none;
   transition: all 0.2s ease;
   cursor: pointer;
-  margin: 1rem 1rem 1rem 1rem;
+  /* margin: 1rem 1rem 1rem 1rem; */
   border-radius: var(--borderRadius);
 }
 .Button:hover,

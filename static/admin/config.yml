@@ -199,6 +199,32 @@ collections: # A list of collections the CMS should be able to edit
               - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
               - { label: Noindex, name: noindex, widget: boolean, required: false }
 
+      - file: 'content/pages/prices.md'
+        label: 'Preise und Verfügbarkeit'
+        name: 'price-page'
+        fields:
+          - { label: Template, name: template, widget: hidden, default: PricePage }
+          - { label: Slug, name: slug, widget: hidden, default: '' }
+          - { label: Title, name: title, widget: string }
+          - { label: Featured Image, name: featuredImage, widget: image }
+          - { label: Subtitle, name: subtitle, widget: markdown, required: false }
+          - { label: Body, name: body, widget: markdown }
+          - label: 'Preisliste'
+            name: 'priceList'
+            widget: 'list'
+            fields:
+              - { name: title, label: title, widget: string, default: '' }
+              - { name: description, label: description, widget: markdown }
+          - label: 'Meta'
+            required: false
+            name: 'meta'
+            widget: 'object'
+            fields:
+              - { label: Title, name: title, widget: string, required: false }
+              - { label: Description, name: description, widget: text, required: false }
+              - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
+              - { label: Noindex, name: noindex, widget: boolean, required: false }
+
       - file: 'content/pages/projects.md'
         label: 'Projects Page'
         name: 'projects-page'
@@ -259,8 +285,15 @@ collections: # A list of collections the CMS should be able to edit
       - { label: Company, name: company, widget: text }
       - { label: CompanyUrl, name: companyUrl, widget: text }
       - { label: Featured Image, name: featuredImage, widget: image, required: false }
+      - { label: Sort Index, name: sortIndex, widget: number, value_type: "int" }
       - { label: Excerpt, name: excerpt, widget: text }
       - { label: Content, name: body, widget: markdown }
+      - label: button
+        name: button 
+        widget: list
+        fields:
+          - { name: text, label: Text, widget: text }
+          - { name: ref, label: Reference, widget: string, default: '' }
       - label: 'Meta'
         required: false
         name: 'meta'

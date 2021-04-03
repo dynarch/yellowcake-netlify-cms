@@ -11,6 +11,7 @@ import { ContactPageTemplate } from '../templates/ContactPage'
 import { EmploymentPageTemplate } from '../templates/EmploymentPage'
 import { InfoPageTemplate } from '../templates/InfoPage'
 import { HomePageTemplate } from '../templates/HomePage'
+import { PricePageTemplate } from '../templates/PricePage'
 import { ProjectIndexTemplate } from '../templates/ProjectIndex'
 import { ServiceIndexTemplate } from '../templates/ServiceIndex'
 import { SinglePostTemplate } from '../templates/SinglePost'
@@ -51,6 +52,9 @@ CMS.registerPreviewTemplate('infoPages', ({ entry }) => (
 ))
 CMS.registerPreviewTemplate('home-page', ({ entry }) => (
   <HomePageTemplate {...entry.toJS().data} />
+))
+CMS.registerPreviewTemplate('price-page', ({ entry }) => (
+  <PricePageTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('projects-page', ({ entry }) => (
   <ProjectIndexTemplate {...entry.toJS().data} />

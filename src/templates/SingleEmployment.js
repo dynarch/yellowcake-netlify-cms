@@ -22,7 +22,7 @@ export const SingleEmploymentTemplate = ({
     <article
       className="SinglePost section light"
       itemScope
-      itemType="http://schema.org/BlogEmploymenting"
+      itemType="http://schema.org/Employment"
     >
       <div className="container skinny">
         <Link className="SinglePost--BackButton" to="/employment/">
@@ -40,7 +40,7 @@ export const SingleEmploymentTemplate = ({
                 className="SinglePost--Pagination--Link prev"
                 to={prevEmploymentURL}
               >
-                Vorherige Anstellung
+                Nächte Anstellung
               </Link>
             )}
             {nextEmploymentURL && (
@@ -48,7 +48,7 @@ export const SingleEmploymentTemplate = ({
                 className="SinglePost--Pagination--Link next"
                 to={nextEmploymentURL}
               >
-                Nächte Anstellung
+                Vorherige Anstellung
               </Link>
             )}
           </div>
@@ -103,13 +103,14 @@ export const SingleEmploymentTemplate = ({
             <Content source={html} />
           </div>
 
+
           <div className="SinglePost--Pagination">
             {prevEmploymentURL && (
               <Link
                 className="SinglePost--Pagination--Link prev"
                 to={prevEmploymentURL}
               >
-                Vorherige Anstellung
+                Nächte Anstellung
               </Link>
             )}
             {nextEmploymentURL && (
@@ -117,7 +118,7 @@ export const SingleEmploymentTemplate = ({
                 className="SinglePost--Pagination--Link next"
                 to={nextEmploymentURL}
               >
-                Nächte Anstellung
+                 Vorherige Anstellung
               </Link>
             )}
           </div>
@@ -177,7 +178,7 @@ export const pageQuery = graphql`
     }
 
     allEmployments: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "employments" } } }
+      filter: { fields: { contentType: { eq: "employment" } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {
