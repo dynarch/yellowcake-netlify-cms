@@ -169,7 +169,7 @@ export class Navigation extends Component {
                   <NavLink to="/service/" className="Nav--GroupLink">
                     Bereiche
                   </NavLink>
-                  <NavLink to="/commerce/" className="Nav--GroupLink">
+                  <NavLink to="/prices/" className="Nav--GroupLink">
                     Preise und Verfügbarkeit
                   </NavLink>
                 </div>

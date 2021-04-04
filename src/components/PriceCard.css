@@ -1,0 +1,37 @@
+.PriceCard {
+  text-decoration: none;
+  background: var(--lightGrey);
+  color: inherit;
+  border: 1px solid var(--darkGrey);
+  border-radius: var(--borderRadius);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.15s ease-in-out;
+  overflow: hidden;
+}
+
+.PriceCard:hover,
+.PriceCard:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+.PriceCard--Title {
+  display: block;
+  background-color: white;
+  text-align: center;
+  font-size: 6rem;
+  margin: 0;
+  padding: 0;
+}
+
+.PriceCard--Content {
+  padding: 0 2.5rem 2.5rem;
+}
+
+.PriceCard--Category {
+  font-size: 1.2rem;
+  min-height: 1.2em;
+  line-height: 1;
+  margin: 0.5em 0;
+}
