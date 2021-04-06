@@ -4,7 +4,7 @@ title: Project Request Automation
 status: Accomplished
 startDate: 2021-02-16
 endDate: 2021-02-16
-featuredImage: 'https://ucarecdn.com/a7f36998-7a41-4a63-b0b1-91ef46cd638b/'
+featuredImage: 'https://ucarecdn.com/034860d8-4bca-49d5-a4eb-fe521a887a0e/'
 company: Vorwerk Autotec
 companyUrl: https://vorwerk-autotec.de/
 tools: 

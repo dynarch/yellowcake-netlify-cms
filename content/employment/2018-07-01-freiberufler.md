@@ -13,8 +13,8 @@ button:
   - text: Projekte
     ref: /projects/?s=freelance
 meta:
-  title: Freiberufler
-  description: Freiberufler Tätigkeit
+  title: Freiberufliche Tätigkeit
+  description: Freiberufliche Tätigkeit
 sortIndex: 2
 ---
 ### Beschreibung

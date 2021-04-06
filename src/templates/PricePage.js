@@ -25,11 +25,6 @@ export const PricePageTemplate = ({
 
     <section className="section">
       <div className="container">
-        <Content source={body} />
-      </div>
-    </section>
-    <section className="section">
-      <div className="container">
         <div className="PostSection">
           <div className="PostSection--Grid">
             {priceList &&
@@ -38,6 +33,11 @@ export const PricePageTemplate = ({
               ))}
           </div>
         </div>
+      </div>
+    </section>
+    <section className="section">
+      <div className="container" backgroundImage="url(/images/header_blog.png)">
+        <Content source={body} />
       </div>
     </section>
   </main>

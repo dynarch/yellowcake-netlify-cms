@@ -6,6 +6,7 @@ import './cms-utils'
 
 import { AboutPageTemplate } from '../templates/AboutPage'
 import { BlogIndexTemplate } from '../templates/BlogIndex'
+import { CertificatesPageTemplate } from '../templates/CertificatesPage'
 import { ComponentsPageTemplate } from '../templates/ComponentsPage'
 import { ContactPageTemplate } from '../templates/ContactPage'
 import { EmploymentPageTemplate } from '../templates/EmploymentPage'
@@ -37,6 +38,9 @@ CMS.registerPreviewTemplate('about-page', ({ entry }) => (
 ))
 CMS.registerPreviewTemplate('blog-page', ({ entry }) => (
   <BlogIndexTemplate {...entry.toJS().data} />
+))
+CMS.registerPreviewTemplate('certificates-page', ({ entry }) => (
+  <CertificatesPageTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('components-page', ({ entry }) => (
   <ComponentsPageTemplate {...entry.toJS().data} />

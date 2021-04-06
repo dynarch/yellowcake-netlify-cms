@@ -96,7 +96,7 @@ export class Navigation extends Component {
                 Blog
                 <div className="Nav--GroupLinks">
                   <NavLink to="/blog/" className="Nav--GroupLink">
-                    All Posts
+                    Alle Beiträge
                   </NavLink>
                   {subNav.posts.map((link, index) => (
                     <NavLink
@@ -140,6 +140,9 @@ export class Navigation extends Component {
                   </NavLink>
                   <NavLink to="/employment/" className="Nav--GroupLink">
                     Werdegang
+                  </NavLink>
+                  <NavLink to="/certificates/" className="Nav--GroupLink">
+                    Zertifikate
                   </NavLink>
                 </div>
               </span>

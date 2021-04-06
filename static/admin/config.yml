@@ -78,6 +78,26 @@ collections: # A list of collections the CMS should be able to edit
               - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
               - { label: Noindex, name: noindex, widget: boolean, required: false }
 
+      - file: 'content/pages/certificates.md'
+        label: 'Zertifikaten'
+        name: 'certificates-page'
+        fields:
+          - { label: Template, name: template, widget: hidden, default: CertificatesPage }
+          - { label: Slug, name: slug, widget: hidden, default: '' }
+          - { label: Title, name: title, widget: string }
+          - { label: Featured Image, name: featuredImage, widget: image }
+          - { label: Subtitle, name: subtitle, widget: markdown, required: false }
+          - { label: Body, name: body, widget: markdown }
+          - label: 'Meta'
+            required: false
+            name: 'meta'
+            widget: 'object'
+            fields:
+              - { label: Title, name: title, widget: string, required: false }
+              - { label: Description, name: description, widget: text, required: false  }
+              - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
+              - { label: Noindex, name: noindex, widget: boolean, required: false }
+
       - file: 'content/pages/components.md'
         label: 'Components Page'
         name: 'components-page'
@@ -263,6 +283,29 @@ collections: # A list of collections the CMS should be able to edit
               - { label: Description, name: description, widget: text, required: false  }
               - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
               - { label: Noindex, name: noindex, widget: boolean, required: false }
+
+  - name: certificate
+    label: Zertifikat
+    editor:
+      preview: true
+    folder: content/certificates
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - { label: Template, name: template, widget: hidden, default: SingleCertificate }
+      - { label: Title, name: title, widget: string }
+      - { label: Ausstellungsdatum, name: issueDate, widget: date, format: 'YYYY-MM-DD' }
+      - { label: Area, name: area, widget: string }
+      - { label: Content, name: body, widget: markdown }
+      - label: 'Meta'
+        required: false
+        name: 'meta'
+        widget: 'object'
+        fields:
+          - { label: Title, name: title, widget: string, required: false }
+          - { label: Description, name: description, widget: text,  required: false }
+          - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
+          - { label: Noindex, name: noindex, widget: boolean, required: false }
 
   - name: employment
     label: Employment

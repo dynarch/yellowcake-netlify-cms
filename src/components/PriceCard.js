@@ -9,8 +9,8 @@ const PriceCard = ({
   className = ''
 }) => (
   <div className={`PriceCard ${className}`}>
+    <div className="PriceCard--Title">{title}</div>
     <div className="PriceCard--Content">
-      {title && <h3 className="PriceCard--Title">{title}</h3>}
       <Content source={description} />
     </div>
   </div>
