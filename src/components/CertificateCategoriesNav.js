@@ -1,12 +1,13 @@
+
 import React from 'react'
 import { Link } from 'gatsby'
 
 import BlogSearch from './BlogSearch'
 import './PostCategoriesNav.css'
 
-const PostCategoriesNav = ({ categories, enableSearch }) => (
+const CertificateCategoriesNav = ({ categories, enableSearch }) => (
   <div className="PostCategoriesNav">
-    <Link className="NavLink" exact="true" to={`/blog/`}>
+    <Link className="NavLink" exact="true" to={`/certificates/`}>
       All
     </Link>
     {categories.map((category, index) => (
@@ -24,4 +25,4 @@ const PostCategoriesNav = ({ categories, enableSearch }) => (
   </div>
 )
 
-export default PostCategoriesNav
+export default CertificateCategoriesNav

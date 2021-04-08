@@ -296,7 +296,41 @@ collections: # A list of collections the CMS should be able to edit
       - { label: Title, name: title, widget: string }
       - { label: Ausstellungsdatum, name: issueDate, widget: date, format: 'YYYY-MM-DD' }
       - { label: Area, name: area, widget: string }
+      - { label: Role, name: role, widget: string }
       - { label: Content, name: body, widget: markdown }
+      - label: 'Categories'
+        name: 'categories'
+        widget: 'list'
+        required: false
+        fields:
+          - label: 'Category'
+            name: 'category'
+            widget: 'relation'
+            collection: 'certificateCategories'
+            searchFields: ['title']
+            valueField: 'title'
+      - label: 'Meta'
+        required: false
+        name: 'meta'
+        widget: 'object'
+        fields:
+          - { label: Title, name: title, widget: string, required: false }
+          - { label: Description, name: description, widget: text,  required: false }
+          - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
+          - { label: Noindex, name: noindex, widget: boolean, required: false }
+
+  - name: certificateCategories
+    label: Certificate's Category
+    editor:
+      preview: false
+    folder: content/certificateCategories
+    slug: '{{slug}}'
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - { label: Template, name: template, widget: hidden, default: CertificatesPage }
+      - { label: Title, name: title, widget: string }
+      - { label: Description, name: description, widget: string, required: false }
+      - { label: Featured Image, name: featuredImage, widget: image, required: false }
       - label: 'Meta'
         required: false
         name: 'meta'

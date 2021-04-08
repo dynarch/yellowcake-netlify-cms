@@ -20,6 +20,7 @@
   transform: translateY(-1px);
   box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+  transition: colorBg;
 }
 
 @keyframes colorBg {
@@ -67,4 +68,3 @@
   display: flex;
   justify-content: center;
 }
-

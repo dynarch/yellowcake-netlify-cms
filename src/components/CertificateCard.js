@@ -2,7 +2,7 @@ import React from 'react'
 import Content from '../components/Content'
 import { Link } from 'gatsby'
 // import Image from './Image'
-import { Calendar } from 'react-feather'
+import { Calendar, Package, User } from 'react-feather'
 
 import './EmploymentCard.css'
 
@@ -10,6 +10,8 @@ const CertificateCard = ({
   title,
   slug,
   html,
+  role,
+  area,
   issueDate
 }) => (
   <div className="EmploymentCard">
@@ -29,6 +31,22 @@ const CertificateCard = ({
             >
               <time itemProp="issueDate" date={issueDate}>{issueDate}</time>
             </time>
+          </div>
+        </div>
+        <div className="EmploymentCard--Details--Row">
+          <div className="EmploymentCard--Details--Item">
+            <User/>
+          </div>
+          <div className="EmploymentCard--Details--Item">
+            {role}
+          </div>
+        </div>
+        <div className="EmploymentCard--Details--Row">
+          <div className="EmploymentCard--Details--Item">
+            <Package/>
+          </div>
+          <div className="EmploymentCard--Details--Item">
+            {area}
           </div>
         </div>
       </div>

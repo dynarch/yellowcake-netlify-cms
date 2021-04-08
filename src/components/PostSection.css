@@ -41,17 +41,23 @@
   }
 }
 
-.PostSection--Title {
-  width: 100%;
-  max-width: 200px;
-  margin: 0 auto 4rem auto;
-  line-height: 1.2;
+@media screen and (max-width: 888px) {
+  .PostSection--Grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+
+  .PostSection--Grid > * {
+    width: calc(50% - 2rem);
+    margin: 1rem;
+    }
 }
 
-@media screen and (max-width: 888px) {
+@media screen and (max-width: 500px) {
   .PostSection--Grid > * {
     width: 100%;
-    max-width: 50rem;
+    /* max-width: 50rem; */
     margin: 0 auto 4rem;
     display: block;
   }
@@ -63,4 +69,11 @@
       grid-gap: 0;
     }
   }
+}
+
+.PostSection--Title {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 4rem auto;
+  line-height: 1.2;
 }

@@ -52,7 +52,6 @@ const ServiceIndex = ({ data: { page, services } }) => (
       services={services.edges.map(services => ({
         ...services.node,
         ...services.node.frontmatter,
-        ...services.node.html,
         ...services.node.fields
       }))}
        />

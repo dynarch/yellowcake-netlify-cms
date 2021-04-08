@@ -10,6 +10,8 @@ import './SinglePost.css'
 export const SingleCertificateTemplate = ({
   title,
   issueDate,
+  role,
+  area,
   html,
   nextCertificateURL,
   prevCertificateURL
@@ -63,6 +65,22 @@ export const SingleCertificateTemplate = ({
                   {issueDate}
                 </time>
                 )}
+              </td>
+            </tr>
+            <tr>
+              <th>
+                Bereich:
+              </th>
+              <td>
+                {area}
+              </td>
+            </tr>
+            <tr>
+              <th>
+                Rolle:
+              </th>
+              <td>
+                {role}
               </td>
             </tr>
           </table>
@@ -131,6 +149,8 @@ export const pageQuery = graphql`
         title
         template
         issueDate(formatString: "MMMM Do, YYYY")
+        role
+        area
       }
     }
 

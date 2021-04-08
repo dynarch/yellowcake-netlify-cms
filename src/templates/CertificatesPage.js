@@ -5,52 +5,85 @@ import Content from '../components/Content'
 import Layout from '../components/Layout'
 import PageHeader from '../components/PageHeader'
 import CertificateCard from '../components/CertificateCard'
+import CertificateCategoriesNav from '../components/CertificateCategoriesNav'
 
 import '../components/PostSection.css'
 
-export const CertificatesPageTemplate = ({ title, subtitle, featuredImage, certificates, body }) => 
-{
-  return (
-  <main>
-    <PageHeader
-      title={title}
-      subtitle={subtitle}
-      backgroundImage={featuredImage}
-    />
+export const byCategory = (certificates, title, contentType) => {
+  const isCategory = contentType === 'certificateCategories'
+  const byCategory = certificates =>
+    certificates.categories &&
+    certificates.categories.filter(cat => cat.category === title).length
+  return isCategory ? certificates.filter(byCategory) : certificates
+}
 
-    <section className="section">
-      <div className="container">
-        <Content source={body} />
-      </div>
-    </section>
-    <section className="section">
-      <div className="container">
-          {certificates.map((item, index) => (
-              <CertificateCard key={item.title + index} {...item} />
-            ))
-          }
-      </div>
-    </section>
-  </main>
+export const CertificatesPageTemplate = ({ 
+  title, 
+  subtitle, 
+  featuredImage, 
+  certificates, 
+  certificateCategories,
+  body,
+  contentType
+}) => {
+  let filteredCertificates =
+  certificates && !!certificates.length
+      ? byCategory(certificates, title, contentType)
+      : []
+  return (
+    <main>
+      <PageHeader
+        title={title}
+        subtitle={subtitle}
+        backgroundImage={featuredImage}
+      />
+
+      {!!certificateCategories.length && (
+        <section className="section thin">
+          <div className="container">
+            <CertificateCategoriesNav enableSearch categories={certificateCategories} />
+          </div>
+        </section>
+      )}
+
+      <section className="section">
+        <div className="container">
+          <Content source={body} />
+        </div>
+      </section>
+      <section className="section">
+        <div className="container">
+            {filteredCertificates.map((item, index) => (
+                <CertificateCard key={item.title + index} {...item} />
+              ))
+            }
+        </div>
+      </section>
+    </main>
   )
 }
 
 // Export Default CertificatePage for front-end
-const CertificatesPage = ({ data: { page, certificates } }) => (
+const CertificatesPage = ({ data: { page, certificates, certificateCategories } }) => (
   <Layout
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
   >
     <CertificatesPageTemplate 
       {...page} 
+      {...page.fields}
       {...page.frontmatter} 
       body={page.html}
-      certificates={certificates.edges.map(certificates => ({
-        ...certificates.node,
-        ...certificates.node.frontmatter,
-        ...certificates.node.html,
-        ...certificates.node.fields
+      certificates={certificates.edges.map(certificate => ({
+        ...certificate.node,
+        ...certificate.node.frontmatter,
+        ...certificate.node.fields
       }))}
+      certificateCategories={certificateCategories.edges.map(post => ({
+          ...post.node,
+          ...post.node.frontmatter,
+          ...post.node.fields
+        }))}
        />
   </Layout>
 )
@@ -90,8 +123,29 @@ export const pageQuery = graphql`
           frontmatter {
             title
             issueDate(formatString: "MMMM Do, YYYY")
+            role
+            area
+            categories {
+              category
+            }
           }
           html
+        }
+      }
+    }
+    certificateCategories: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "certificateCategories" } } }
+      sort: { order: ASC, fields: [frontmatter___sortIndex] }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            description
+          }
         }
       }
     }
