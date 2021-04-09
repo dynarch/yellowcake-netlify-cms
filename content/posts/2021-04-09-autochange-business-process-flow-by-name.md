@@ -113,7 +113,7 @@ If they are found their IDs will be transfered to a function **switchProcess.** 
 
 JavaScript generated code:
 
-```
+```javascript
 /// <reference path="../lib/@types/xrm/index.d.ts" />
 'use strict';
 var BpfUtil;
