@@ -7,7 +7,7 @@ excerpt: "This article is an extension of an article Business Process Flows:
   Programmatically Switch BPF in Dynamics 365 using JavaScript from
   a  PowerObjects blog."
 categories:
-  - category: News
+  - category: Microsoft PowerApps
 meta:
   title: Autochange business process flow by name
   description: "Autochange business process flow by name with PowerApps Typescript "
@@ -113,7 +113,7 @@ If they are found their IDs will be transfered to a function **switchProcess.** 
 
 JavaScript generated code:
 
-```
+```javascript
 /// <reference path="../lib/@types/xrm/index.d.ts" />
 'use strict';
 var BpfUtil;
