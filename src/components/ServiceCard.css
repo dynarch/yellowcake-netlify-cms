@@ -4,7 +4,7 @@
   color: inherit;
   border: 1px solid var(--borderColor);
   border-radius: var(--borderRadius);
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--boxShadowBase);
   text-align: center;
 }
 
@@ -18,7 +18,7 @@
 .ServiceCard:hover,
 .ServiceCard:focus {
   transform: translateY(-1px);
-  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--boxShadowFocus);
   cursor: pointer;
   transition: colorBg;
 }

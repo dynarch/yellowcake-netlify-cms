@@ -21,6 +21,7 @@ export const PricePageTemplate = ({
       title={title}
       subtitle={subtitle}
       backgroundImage={featuredImage}
+      svg={true}
     />
 
     <section className="section">

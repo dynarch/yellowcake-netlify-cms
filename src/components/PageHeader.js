@@ -10,9 +10,16 @@ const PageHeader = ({
   subtitle,
   backgroundImage,
   large,
-  className = ''
+  className = '',
+  svg = false
 }) => {
   if (large) className += ' PageHeader-large'
+  if(svg){
+    return (
+      <img style={{backgroundImage:{backgroundImage}}} alt={title} />
+    )
+  }
+
   return (
     <div className={`PageHeader relative ${className}`}>
       {backgroundImage && (

@@ -14,6 +14,7 @@
   --boxBorderBase: 1px solid var(--lightGrey);
   --boxTransition:  all 0.15s ease-in-out;
   --boxShadowBase: 0 2px 15px rgba(0, 0, 0, 0.1);
+  --boxShadowFocus: 0 2px 30px rgba(0, 0, 0, 0.15);
 }
 
 ::-webkit-scrollbar {

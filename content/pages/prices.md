@@ -3,7 +3,7 @@ template: PricePage
 slug: prices
 title: Preise und Verfügbarkeit
 # featuredImage: https://ucarecdn.com/8af82b68-427e-4134-9813-a1e1c0493221/
-featuredImage: "/images/header_prices.svg"
+featuredImage: "/images/header_services.png"
 subtitle: 
 priceList:
   - title: €80
@@ -26,6 +26,9 @@ priceList:
       ### All Inclusive
       
       Für die Projekten im Umkreis 200 km von Bielefeld, weitere Projekte nach Absprache.
+meta:
+  title: Preise und Verfügbarkeit Ruslan Androsjuk
+  description: Preise und Verfügbarkeit Ruslan Androsjuk
 ---
 ### Preise
 

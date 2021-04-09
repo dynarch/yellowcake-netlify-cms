@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Content from '../components/Content'
+// import Content from '../components/Content'
 import Layout from '../components/Layout'
 import PageHeader from '../components/PageHeader'
 import CertificateCard from '../components/CertificateCard'
@@ -41,16 +41,16 @@ export const CertificatesPageTemplate = ({
       {!!certificateCategories.length && (
         <section className="section thin">
           <div className="container">
-            <CertificateCategoriesNav enableSearch categories={certificateCategories} />
+            <CertificateCategoriesNav categories={certificateCategories} />
           </div>
         </section>
       )}
 
-      <section className="section">
+      {/* <section className="section">
         <div className="container">
           <Content source={body} />
         </div>
-      </section>
+      </section> */}
       <section className="section">
         <div className="container">
             {filteredCertificates.map((item, index) => (
@@ -113,7 +113,7 @@ export const pageQuery = graphql`
     
     certificates: allMarkdownRemark(
       filter: { fields: { contentType: { eq: "certificates" } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: { order: DESC, fields: [frontmatter___issueDate] }
     ) {
       edges {
         node {
@@ -144,7 +144,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            description
+            subtitle
           }
         }
       }

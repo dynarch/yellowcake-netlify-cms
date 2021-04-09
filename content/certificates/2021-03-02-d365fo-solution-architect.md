@@ -3,7 +3,7 @@ template: SingleCertificate
 slug: d365fo-solution-architect
 title: Dynamics 365 Finance and Operations Solution Architect Expert
 area: Microsoft Dynamics 365 for Finance and Operations
-role: Microsoft Dynamics Finance Solution Architect Expert
+role: Solution Architect Expert
 issueDate: 2021-03-02
 categories:
   - category: Dynamics 365 FO

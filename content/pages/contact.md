@@ -2,7 +2,6 @@
 template: ContactPage
 slug: contact
 title: Kontakt
-
 featuredImage: https://ucarecdn.com/1205a511-4233-4d57-b231-e8ec65178a0b/
 # featuredImage: https://ucarecdn.com/e22a858a-b420-47af-99f6-ed54b6860333/
 subtitle: Nehmen Sie Kontakt auf
