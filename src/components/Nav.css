@@ -51,6 +51,18 @@
   border-bottom-color: currentColor;
 }
 
+@media screen and (max-width: 880px) {
+  .NavLink {
+    padding: 0.5rem 0.5rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .NavLink {
+    padding: 0.5rem 0.2rem;
+  }
+}
+
 .Nav--Group {
   position: relative;
   cursor: pointer;

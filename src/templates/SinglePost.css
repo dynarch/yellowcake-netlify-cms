@@ -30,6 +30,12 @@
 
 @media screen and (max-width: 750px) {
   .SinglePost--Content {
+    padding: 4rem 4rem;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .SinglePost--Content {
     padding: 4rem 2rem;
   }
 }
@@ -56,22 +62,19 @@
 }
 
 .SinglePost--InnerContent {
-  padding: 0 8rem;
+  padding: 3rem 0 0 0;
+  text-align: justify;
 }
 
 @media screen and (max-width: 750px) {
   .SinglePost--InnerContent {
-    padding: 0;
+    padding: 2rem 0 0 0;
   }
 }
 
-.SingleProject--InnerContent {
-  padding: 0 2rem;
-}
-
-@media screen and (max-width: 750px) {
-  .SingleProject--InnerContent {
-    padding: 0;
+@media screen and (max-width: 580px) {
+  .SinglePost--InnerContent {
+    padding: 1rem 0 0 0;
   }
 }
 
@@ -95,9 +98,21 @@
 }
 
 table {
-  margin: 2rem 2rem 2rem 2rem;
+  margin: 2rem 0;
   border-collapse: collapse;
   width: 100%;
+}
+
+@media screen and (max-width: 750px) {
+  table {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 5800px) {
+  table {
+    padding: 0rem;
+  }
 }
 
 th, td {
