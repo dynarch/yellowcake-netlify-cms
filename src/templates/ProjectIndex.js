@@ -132,6 +132,9 @@ export const pageQuery = graphql`
         template
         subtitle
         featuredImage
+        startDate
+        endDate
+        company
       }
     }
 
@@ -148,8 +151,8 @@ export const pageQuery = graphql`
           frontmatter {
             title
             status
-            startDate
-            endDate
+            startDate(formatString: "MMMM Do, YYYY")
+            endDate(formatString: "MMMM Do, YYYY")
             featuredImage
             company
             excerpt

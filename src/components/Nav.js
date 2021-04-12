@@ -71,7 +71,6 @@ export class Navigation extends Component {
           </Link>
           <div className="Nav--Links">
             <NavLink to="/">Home</NavLink>
-            <NavLink to="/components/">Components</NavLink>
             <div
               className={`Nav--Group ${
                 this.state.activeSubNav === 'posts' ? 'active' : ''
@@ -149,20 +148,20 @@ export class Navigation extends Component {
             </div>
             <div
               className={`Nav--Group ${
-                this.state.activeSubNav === 'infoPages' ? 'active' : ''
+                this.state.activeSubNav === 'services' ? 'active' : ''
               }`}
             >
               <span
                 className={`NavLink Nav--GroupParent ${
-                  this.props.location.pathname.includes('commerce') ||
-                  this.props.location.pathname.includes('default')
+                  this.props.location.pathname.includes('service') ||
+                  this.props.location.pathname.includes('prices')
                     ? 'active'
                     : ''
                 }`}
-                onClick={() => this.toggleSubNav('infoPages')}
-                onMouseEnter={() => this.toggleSubNav('infoPages')}
-                onMouseLeave={() => this.toggleSubNav('infoPages')}
-                onKeyDown={e => this.keyToggleSubNav(e, 'infoPages')}
+                onClick={() => this.toggleSubNav('services')}
+                onMouseEnter={() => this.toggleSubNav('services')}
+                onMouseLeave={() => this.toggleSubNav('services')}
+                onKeyDown={e => this.keyToggleSubNav(e, 'services')}
                 tabIndex={0}
                 aria-label="Navigation"
                 role="button"
@@ -178,8 +177,38 @@ export class Navigation extends Component {
                 </div>
               </span>
             </div>
+            <div
+              className={`Nav--Group ${
+                this.state.activeSubNav === 'infoPages' ? 'active' : ''
+              }`}
+            >
+              <span
+                className={`NavLink Nav--GroupParent ${
+                  this.props.location.pathname.includes('dataprotection') ||
+                  this.props.location.pathname.includes('about')
+                    ? 'active'
+                    : ''
+                }`}
+                onClick={() => this.toggleSubNav('infoPages')}
+                onMouseEnter={() => this.toggleSubNav('infoPages')}
+                onMouseLeave={() => this.toggleSubNav('infoPages')}
+                onKeyDown={e => this.keyToggleSubNav(e, 'infoPages')}
+                tabIndex={0}
+                aria-label="Navigation"
+                role="button"
+              >
+                Info
+                <div className="Nav--GroupLinks">
+                  <NavLink to="/dataprotection/" className="Nav--GroupLink">
+                    Datenschutz
+                  </NavLink>
+                  <NavLink to="/about/" className="Nav--GroupLink">
+                    Über mich
+                  </NavLink>
+                </div>
+              </span>
+            </div>
             <NavLink to="/contact/">Kontakt</NavLink>
-            <NavLink to="/about/">Über mich</NavLink>
           </div>
           <button
             className="Button-blank Nav--MenuButton"

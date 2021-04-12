@@ -264,3 +264,11 @@ svg {
   background: white;
   box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
 }
+
+.visible  {
+  display: block;
+}
+
+.invisible  {
+  display: none;
+}

@@ -17,18 +17,22 @@
 
 .ServiceCard:hover,
 .ServiceCard:focus {
+  /* color:white;
+  background: linear-gradient(#180447e3, #231283); */
   transform: translateY(-1px);
   box-shadow: var(--boxShadowFocus);
   cursor: pointer;
-  transition: colorBg;
+  /* animation: colorBg 1s 1; */
 }
 
 @keyframes colorBg {
   from {
+    opacity: 0.2;
     color:black;
-    background-color: white;
+    background: white;
   }
   to {
+    opacity: 1;
     color:white;
     background: linear-gradient(#180447e3, #231283);
   }

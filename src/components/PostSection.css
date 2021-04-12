@@ -45,12 +45,12 @@
   .PostSection--Grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
+    grid-gap: 3rem;
   }
 
   .PostSection--Grid > * {
     width: auto;
-    margin: 2rem;
+    /* margin: 2rem; */
     }
 }
 
