@@ -6,7 +6,7 @@ import Layout from '../components/Layout'
 import PageHeader from '../components/PageHeader'
 import ServiceCard from '../components/ServiceCard'
 
-import '../components/PostSection.css'
+import '../components/CardsSection.css'
 
 export const ServiceIndexTemplate = ({ title, subtitle, featuredImage, services, body }) => 
 {
@@ -25,8 +25,8 @@ export const ServiceIndexTemplate = ({ title, subtitle, featuredImage, services,
     </section>
     <section className="section">
       <div className="container">
-        <div className="PostSection">
-          <div className="PostSection--Grid">
+        <div className="CardsSection">
+          <div className="CardsSection--Grid">
             {services.map((item, index) => (
                 <ServiceCard key={item.title + index} {...item} />
               ))

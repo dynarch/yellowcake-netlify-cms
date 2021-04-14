@@ -1,9 +1,9 @@
 import React from 'react'
 
 import PostCard from '../components/PostCard'
-import './PostSection.css'
+import './CardsSection.css'
 
-class PostSection extends React.Component {
+class CardsSection extends React.Component {
   static defaultProps = {
     posts: [],
     title: '',
@@ -28,10 +28,10 @@ class PostSection extends React.Component {
       visiblePosts = posts.slice(0, limit || posts.length)
 
     return (
-      <div className="PostSection">
-        {title && <h2 className="PostSection--Title">{title}</h2>}
+      <div className="CardsSection">
+        {title && <h2 className="CardsSection--Title">{title}</h2>}
         {!!visiblePosts.length && (
-          <div className="PostSection--Grid">
+          <div className="CardsSection--Grid">
             {visiblePosts.map((post, index) => (
               <PostCard key={post.title + index} {...post} />
             ))}
@@ -49,4 +49,4 @@ class PostSection extends React.Component {
   }
 }
 
-export default PostSection
+export default CardsSection

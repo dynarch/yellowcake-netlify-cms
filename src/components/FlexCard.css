@@ -1,4 +1,4 @@
-.EmploymentCard {
+.FlexCard {
   width: 100%;
   text-decoration: none;
   background: var(--primaryBackground);
@@ -13,31 +13,35 @@
   padding: 2rem;
 }
 
-.EmploymentCard:hover,
-.EmploymentCard:focus {
+.FlexCard--Content {
+  padding: 0 2.5rem 2.5rem;
+}
+
+.FlexCard:hover,
+.FlexCard:focus {
   box-shadow: var(--boxShadowFocus);
 }
 
-.EmploymentCard--Details--Row {
+.FlexCard--Content--Row {
   display: flex;
   flex-direction: row;
   margin-bottom: 1rem;
   width: 100%;
 }
 
-.EmploymentCard--Details--Left {
+.FlexCard--Content--Left {
   padding: 1rem 1rem 1rem;
   display: block;
   width: 35%;
 }
 
-.EmploymentCard--Details--Right {
+.FlexCard--Content--Right {
   padding: 1rem 3rem 1rem 1rem;
   display: block;
   width: 65%;
 }
 
-.EmploymentCard--Details--Item {
+.FlexCard--Content--Item {
   display: inline-block;
   text-align: justify;
   align-content: center;
@@ -47,14 +51,33 @@
   color: inherit;
 }
 
-a.EmploymentCard--Details--Item:hover,
-a.EmploymentCard--Details--Item:focus{
+a.FlexCard--Content--Item:hover,
+a.FlexCard--Content--Item:focus{
   transition: color 0.2s ease-in-out;
   color: var(--primary);
 }
 
-.EmploymentCard--Title {
+.FlexCard--Title {
   margin: 0 0 0 1rem;
   flex: 1 1 30%;
-  order: 2;
+}
+
+.FlexCard--Swipe {
+  display: none;
+}
+
+.FlexCard--Content--Hide{
+  display: block;
+}
+
+.FlexCard--Content:hover > .FlexCard--Swipe{
+  margin:0;
+  position:absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.FlexCard--Content:hover > .FlexCard--Content--Hide{
+  display: none;
 }

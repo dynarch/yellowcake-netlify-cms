@@ -6,7 +6,7 @@ import Content from '../components/Content'
 import Layout from '../components/Layout'
 
 import PriceCard from '../components/PriceCard'
-import "../components/PostSection.css"
+import "../components/CardsSection.css"
 
 // Export Template for use in CMS preview
 export const PricePageTemplate = ({
@@ -26,8 +26,8 @@ export const PricePageTemplate = ({
 
     <section className="section">
       <div className="container">
-        <div className="PostSection">
-          <div className="PostSection--Grid">
+        <div className="CardsSection">
+          <div className="CardsSection--Grid">
             {priceList &&
               priceList.map((price, index) => (
                 <PriceCard key={price.title + index} {...price}  />

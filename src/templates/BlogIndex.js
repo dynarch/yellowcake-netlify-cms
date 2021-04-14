@@ -4,7 +4,7 @@ import { Location } from '@reach/router'
 import qs from 'qs'
 
 import PageHeader from '../components/PageHeader'
-import PostSection from '../components/PostSection'
+import CardsSection from '../components/CardsSection'
 import PostCategoriesNav from '../components/PostCategoriesNav'
 import Layout from '../components/Layout'
 
@@ -80,7 +80,7 @@ export const BlogIndexTemplate = ({
           {!!posts.length && (
             <section className="section">
               <div className="container">
-                <PostSection posts={filteredPosts} />
+                <CardsSection posts={filteredPosts} />
               </div>
             </section>
           )}

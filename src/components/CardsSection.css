@@ -1,14 +1,14 @@
-.PostSection {
+.CardsSection {
 }
 
-.PostSection--Grid {
+.CardsSection--Grid {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: stretch;
 }
 
-.PostSection button {
+.CardsSection button {
   margin-top: 1rem;
   margin-top: 5rem;
   background: white;
@@ -17,51 +17,51 @@
   cursor: pointer;
 }
 
-.PostSection button:hover {
+.CardsSection button:hover {
   background: black;
   border: 2px solid white;
   color: white;
 }
 
-.PostSection--Grid > * {
+.CardsSection--Grid > * {
   width: calc(33.33% - 2rem);
   margin-bottom: 4rem;
 }
 
 @supports (display: grid) {
-  .PostSection--Grid {
+  .CardsSection--Grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 4rem;
   }
 
-  .PostSection--Grid > * {
+  .CardsSection--Grid > * {
     width: auto;
     margin: 0;
   }
 }
 
 @media screen and (max-width: 888px) {
-  .PostSection--Grid {
+  .CardsSection--Grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 3rem;
   }
 
-  .PostSection--Grid > * {
+  .CardsSection--Grid > * {
     width: auto;
     /* margin: 2rem; */
     }
 }
 
 @media screen and (max-width: 580px) {
-  .PostSection--Grid > * {
+  .CardsSection--Grid > * {
     margin: 0 auto 4rem;
     display: block;
   }
 
   @supports (display: grid) {
-    .PostSection--Grid {
+    .CardsSection--Grid {
       display: block;
       grid-template-columns: 1;
       grid-gap: 0;
@@ -69,7 +69,7 @@
   }
 }
 
-.PostSection--Title {
+.CardsSection--Title {
   width: 100%;
   max-width: 200px;
   margin: 0 auto 4rem auto;

@@ -6,7 +6,7 @@ import Layout from '../components/Layout'
 import PageHeader from '../components/PageHeader'
 import EmploymentCard from '../components/EmploymentCard'
 
-import '../components/PostSection.css'
+import '../components/CardsSection.css'
 
 export const EmploymentPageTemplate = ({ title, subtitle, featuredImage, employments, body }) => 
 {

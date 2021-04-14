@@ -1,0 +1,48 @@
+.Card {
+    text-decoration: none;
+    background: white;
+    color: inherit;
+    border: 1px solid var(--lightGrey);
+    border-radius: var(--borderRadius);
+    box-shadow: var(--boxShadowBase);
+    transition: all 0.15s ease-in-out;
+    overflow: hidden;
+  }
+ 
+.Card:hover,
+.Card:focus {
+transform: translateY(-1px);
+box-shadow: var(--boxShadowFocus);
+}
+
+.Card--Image {
+margin: 0 0 2rem 0;
+width: 100%;
+height: 15rem;
+}
+
+.Card--Title {
+text-align: center;
+margin: 1rem;
+}
+
+.Card--Content {
+padding: 0 2.5rem 2.5rem;
+}
+  
+.Card--Content {
+    padding: 0 2.5rem 2.5rem;
+}
+
+.Card--Category {
+    font-size: 1.2rem;
+    min-height: 1.2em;
+    line-height: 1;
+    margin: 0.5em 0;
+}
+  
+.Card--Excerpt{
+    margin:0;
+/* display: none; */
+}
+  

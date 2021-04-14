@@ -1,10 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
 // import Image from './Image'
-import { Calendar, Home, User } from 'react-feather'
+import { Calendar, Home } from 'react-feather'
 
-import './PostCard.css'
-import './EmploymentCard.css'
+import './FlexCard.css'
 
 const ProjectCard = ({
   featuredImage,
@@ -17,39 +16,41 @@ const ProjectCard = ({
   className = '',
   ...props
 }) => (
-  <Link to={slug} className={`PostCard ${className}`}>
+  <Link to={slug} className={`FlexCard ${className}`}>
     {/* {featuredImage && (
-      <div className="PostCard--Image relative">
+      <div className="FlexCard--Image relative">
         <Image background src={featuredImage} alt={title} />
       </div>
     )} */}
-    <div className="PostCard--Title">
-      <h3 className="PostCard--Title">{title}</h3>
+    <div className="FlexCard--Title">
+      <h3 className="FlexCard--Title">{title}</h3>
     </div>
-    <div className="PostCard--Content">
-      {excerpt && <div className="PostCard--Excerpt">{excerpt}</div>}
-      <div className='EmploymentCard--Details--Row'>
-        <div className="EmploymentCard--Details--Item">
-        <Calendar/>
+    <div className="FlexCard--Content">
+      {excerpt && <div className="FlexCard--Hide">{excerpt}</div>}
+      <div className="FlexCard--Content--Swipe">
+        <div className='FlexCard--Content--Row'>
+          <div className="FlexCard--Content--Item">
+          <Calendar/>
+          </div>
+          <div className="FlexCard--Content--Item">
+            <time
+              itemProp="startDate endDate"
+              date={startDate}
+            >
+              {startDate && (
+                <time itemProp="startDate" date={startDate}>{startDate}</time>)} - 
+              {endDate ? (
+                <time itemProp="endDate" date={endDate}>{endDate}</time>) : " bis jetzt"}
+            </time>
+          </div>
         </div>
-        <div className="EmploymentCard--Details--Item">
-          <time
-            itemProp="startDate endDate"
-            date={startDate}
-          >
-            {startDate && (
-              <time itemProp="startDate" date={startDate}>{startDate}</time>)} - 
-            {endDate ? (
-              <time itemProp="endDate" date={endDate}>{endDate}</time>) : " bis jetzt"}
-          </time>
-        </div>
-      </div>
-      <div className="EmploymentCard--Details--Row">
-        <div className="EmploymentCard--Details--Item">
-          <Home/>
-        </div>
-        <div className="EmploymentCard--Details--Item">
-          {company}
+        <div className="FlexCard--Content--Row">
+          <div className="FlexCard--Content--Item">
+            <Home/>
+          </div>
+          <div className="FlexCard--Content--Item">
+            {company}
+          </div>
         </div>
       </div>
     </div>

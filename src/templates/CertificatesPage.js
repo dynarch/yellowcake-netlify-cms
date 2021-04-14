@@ -7,7 +7,7 @@ import PageHeader from '../components/PageHeader'
 import CertificateCard from '../components/CertificateCard'
 import CertificateCategoriesNav from '../components/CertificateCategoriesNav'
 
-import '../components/PostSection.css'
+import '../components/CardsSection.css'
 
 export const byCategory = (certificates, title, contentType) => {
   const isCategory = contentType === 'certificateCategories'

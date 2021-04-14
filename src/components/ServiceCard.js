@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { X } from 'react-feather'
 // import ServiceCard from './ServiceCard'
-import Content from '../components/Content'
+import Content from './Content'
 import { Link } from 'gatsby'
 import './Popup.css'
 import './ServiceCard.css'
