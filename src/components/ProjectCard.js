@@ -27,7 +27,7 @@ const ProjectCard = ({
     </div>
     <div className="FlexCard--Content">
       {excerpt && <div className="FlexCard--Hide">{excerpt}</div>}
-      <div className="FlexCard--Content--Swipe">
+      <div className="FlexCard--Swipe">
         <div className='FlexCard--Content--Row'>
           <div className="FlexCard--Content--Item">
           <Calendar/>

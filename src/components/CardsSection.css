@@ -1,4 +1,5 @@
 .CardsSection {
+  margin: 0;
 }
 
 .CardsSection--Grid {
@@ -25,13 +26,13 @@
 
 .CardsSection--Grid > * {
   width: calc(33.33% - 2rem);
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 @supports (display: grid) {
   .CardsSection--Grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: auto;
     grid-gap: 4rem;
   }
 
@@ -39,45 +40,36 @@
     width: auto;
     margin: 0;
   }
-}
 
-@supports (display: grid) {
   @media screen and (min-width: 1280px) {
     .CardsSection--Grid {
-      display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-gap: 5rem;
     }
-  
-    .CardsSection--Grid > * {
-      width: auto;
-      margin: 0;
+  }
+
+  @media screen and (max-width: 1280px) {
+    .CardsSection--Grid {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
   
   @media screen and (max-width: 888px) {
-  .CardsSection--Grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 3rem;
-  }
-
-  .CardsSection--Grid > * {
-    width: auto;
-    /* margin: 2rem; */
+    .CardsSection--Grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 3rem;
     }
   }
 
   @media screen and (max-width: 580px) {
-    .CardsSection--Grid > * {
-      margin: 0 auto 4rem;
-      display: block;
-    }
-
     .CardsSection--Grid {
       display: block;
       grid-template-columns: 1;
       grid-gap: 0;
+    }
+
+    .CardsSection--Grid > * {
+      margin: 0 auto 4rem;
+      display: block;
     }
   }
 }
