@@ -20,7 +20,6 @@
 .FlexCard:hover,
 .FlexCard:focus {
   box-shadow: var(--boxShadowFocus);
-
 }
 
 .FlexCard--Content--Row {
@@ -52,36 +51,8 @@
   color: inherit;
 }
 
-a.FlexCard--Content--Item:hover,
-a.FlexCard--Content--Item:focus{
-  transition: color 0.4s ease-in-out;
-  color: var(--primary);
-}
 
 .FlexCard--Title {
   margin: 0 0 0 1rem;
   flex: 1 1 30%;
-}
-
-.FlexCard--Swipe {
-  display: none;
-}
-
-.FlexCard--Hide{
-  border-top: 1px solid var(--lightGrey);
-  display: block;
-}
-
-.FlexCard:hover .FlexCard--Content .FlexCard--Swipe,
-.FlexCard:focus .FlexCard--Content .FlexCard--Swipe {
-  margin:0;
-  position:relative;
-  top: 0;
-  left: 0;
-  display: block;
-}
-
-.FlexCard:hover .FlexCard--Content .FlexCard--Hide ,
-.FlexCard:focus .FlexCard--Content .FlexCard--Hide {
-  display: none;
 }

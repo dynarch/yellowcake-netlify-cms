@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 import { Calendar, Home } from 'react-feather'
 
 import './FlexCard.css'
+import './FlexCardSwipe.css'
 
 const ProjectCard = ({
   featuredImage,

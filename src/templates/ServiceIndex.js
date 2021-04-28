@@ -42,6 +42,7 @@ export const ServiceIndexTemplate = ({ title, subtitle, featuredImage, services,
 // Export Default ServiceIndex for front-end
 const ServiceIndex = ({ data: { page, services } }) => (
   <Layout
+  children="Some children"
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
   >

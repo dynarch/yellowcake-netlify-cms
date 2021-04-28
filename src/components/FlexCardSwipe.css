@@ -1,0 +1,47 @@
+a.FlexCard--Content--Item:hover,
+a.FlexCard--Content--Item:focus{
+  transition: color 0.4s ease-in-out;
+  color: var(--primary);
+}
+
+@keyframes colorBg {
+  from {
+    opacity: 1;
+    color:black;
+    background: white;
+  }
+  to {
+    opacity: 0.6;
+    color:white;
+    background: linear-gradient(#180447e3, #231283);
+  }
+}
+
+.FlexCard--Swipe {
+  display: none;
+}
+
+.FlexCard--Hide{
+  border-top: 1px solid var(--lightGrey);
+  display: block;
+}
+
+.FlexCard:hover .FlexCard--Content .FlexCard--Swipe,
+.FlexCard:focus .FlexCard--Content .FlexCard--Swipe {
+  transition: color 0.4s ease-in-out;
+  color: var(--primary);
+  animation: colorBg 1s 1;
+  margin:0;
+  position:absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.FlexCard:hover .FlexCard--Content .FlexCard--Hide ,
+.FlexCard:focus .FlexCard--Content .FlexCard--Hide {
+  transition: color 0.4s ease-in-out;
+  color: var(--primary);
+  animation: colorBg 1s 1;
+  display: none;
+}

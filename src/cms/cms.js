@@ -15,6 +15,7 @@ import { HomePageTemplate } from '../templates/HomePage'
 import { PricePageTemplate } from '../templates/PricePage'
 import { ProjectIndexTemplate } from '../templates/ProjectIndex'
 import { ServiceIndexTemplate } from '../templates/ServiceIndex'
+import { ServicesPageTemplate } from '../templates/ServicesPage'
 import { SinglePostTemplate } from '../templates/SinglePost'
 import { SingleProjectTemplate } from '../templates/SingleProject'
 import uploadcare from 'netlify-cms-media-library-uploadcare'
@@ -71,4 +72,7 @@ CMS.registerPreviewTemplate('projects', ({ entry }) => (
 ))
 CMS.registerPreviewTemplate('service-page', ({ entry }) => (
   <ServiceIndexTemplate {...entry.toJS().data} />
+))
+CMS.registerPreviewTemplate('services-multiple-page', ({ entry }) => (
+  <ServicesPageTemplate {...entry.toJS().data} />
 ))

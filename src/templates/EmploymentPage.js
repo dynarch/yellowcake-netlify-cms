@@ -5,8 +5,8 @@ import Content from '../components/Content'
 import Layout from '../components/Layout'
 import PageHeader from '../components/PageHeader'
 import EmploymentCard from '../components/EmploymentCard'
-
 import '../components/CardsSection.css'
+import { VerticalTimeline }  from 'react-vertical-timeline-component';
 
 export const EmploymentPageTemplate = ({ title, subtitle, featuredImage, employments, body }) => 
 {
@@ -25,10 +25,12 @@ export const EmploymentPageTemplate = ({ title, subtitle, featuredImage, employm
     </section>
     <section className="section">
       <div className="container">
-          {employments.map((item, index) => (
-              <EmploymentCard key={item.title + index} {...item} />
+          <VerticalTimeline>
+            {employments.map((item, index) => (
+                <EmploymentCard key={item.title + index} {...item} />
             ))
           }
+          </VerticalTimeline>
       </div>
     </section>
   </main>
